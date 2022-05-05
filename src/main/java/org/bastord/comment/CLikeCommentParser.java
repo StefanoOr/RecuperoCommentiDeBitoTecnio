@@ -15,7 +15,7 @@ public class CLikeCommentParser extends AbstractCommentParser {
     @Override
     public List<Comment> parse(Reader reader) throws IOException {
         //List<Boolean> multiRiga = new ArrayList<>();
-        int numeroRiga = 0;
+        int numeroRiga = 1;
         int colonna = 0;
         int colonnaCommento = 0;
         int numeroMultiRiga = 1;
@@ -47,12 +47,12 @@ public class CLikeCommentParser extends AbstractCommentParser {
                     // COMMENTO RIGA NORMALE
                     // non deve essere processato ulteriormente
                     commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commentoAttuale.toString()));
-                    numeroMultiRiga = 0;
+                    //numeroMultiRiga = 0;
 
                     commentoAttuale.setLength(0);
                 } else if (contenutoMultiRiga && ((carattereAttuale == '/' && caratterePrecedente == '*') || ultimoCarattere)) {
                     contenutoMultiRiga = false;
-                    numeroMultiRiga++;
+
 
                     if (carattereAttuale=='/') {
                         commentoAttuale.setLength(commentoAttuale.length()-1);
@@ -78,13 +78,14 @@ public class CLikeCommentParser extends AbstractCommentParser {
                                 .collect(Collectors.joining("\n"));
                     }
 
-                    commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commento));
-                    numeroMultiRiga = 0;
+
+                    commenti.add(new Comment(numeroRiga-numeroMultiRiga+1, colonnaCommento, numeroMultiRiga, commento));
+                    numeroMultiRiga = 1;
                     rimuoviAsterischi = false; // disabilita il flag per i prossimi commenti
 
                     commentoAttuale.setLength(0);
                 } else {
-                    //Rasael: se siamo in un commento multilinea ed il primo carattere è un asterisco, vuol dire
+                    // se siamo in un commento multilinea ed il primo carattere è un asterisco, vuol dire
                     //che è cominciato con /** e lo consideration un commento javadoc
                     if (commentoAttuale.isEmpty() && contenutoMultiRiga && carattereAttuale=='*') {
                         rimuoviAsterischi = true;
@@ -96,7 +97,7 @@ public class CLikeCommentParser extends AbstractCommentParser {
                 colonnaCommento = colonna;
 
                 contenutoRiga = true;
-                numeroMultiRiga++;
+
             } else if (carattereAttuale == '*' && caratterePrecedente == '/') {
                 colonnaCommento = colonna;
 

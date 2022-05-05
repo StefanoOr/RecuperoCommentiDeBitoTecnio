@@ -13,7 +13,7 @@ import java.util.List;
 public record Comments(String filename, List<Comment> comments) {
 
     public void print() {
-        System.err.println("-".repeat(60) + "\n");
+        System.out.println("-".repeat(60) + "\n");
         for (Comment commento : comments) {
             System.out.format("%d: %d: %d: %s\n", commento.line(), commento.column(), commento.linesCount(), commento.comment()/*.trim().replaceAll(" " + " ", "")*/);
         }

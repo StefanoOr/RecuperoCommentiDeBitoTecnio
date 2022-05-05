@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="primo commit">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="secondo commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DisplayFileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <list id="de619a60-41a7-4bd6-8a8f-6801f9b26b94" name="Changes by Rasael" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +31,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,45 +43,49 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/main/java/org/example/Main.java">
       <ranges>
-        <range start1="3" end1="12" start2="3" end2="8" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="14" end1="14" start2="10" end2="11" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="15" end1="17" start2="12" end2="14" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="19" end1="20" start2="16" end2="16" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="31" end1="32" start2="27" end2="28" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="35" end1="49" start2="31" end2="31" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="62" end1="63" start2="44" end2="45" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="67" end1="68" start2="49" end2="50" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="72" end1="72" start2="54" end2="55" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="74" end1="77" start2="57" end2="60" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="88" end1="88" start2="71" end2="72" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="100" end1="101" start2="84" end2="85" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="103" end1="104" start2="87" end2="91" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="107" end1="108" start2="94" end2="95" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="109" end1="110" start2="96" end2="126" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="113" end1="113" start2="129" end2="134" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="118" end1="118" start2="139" end2="140" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="119" end1="119" start2="141" end2="142" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="131" end1="131" start2="154" end2="157" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="137" end1="138" start2="163" end2="164" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="140" end1="141" start2="166" end2="167" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="142" end1="145" start2="168" end2="171" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="146" end1="146" start2="172" end2="174" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="147" end1="153" start2="175" end2="181" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="154" end1="157" start2="182" end2="185" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="158" end1="159" start2="186" end2="187" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="160" end1="171" start2="188" end2="199" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="172" end1="177" start2="200" end2="205" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="178" end1="179" start2="206" end2="207" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="180" end1="182" start2="208" end2="210" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="183" end1="185" start2="211" end2="212" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
-        <range start1="187" end1="188" start2="214" end2="215" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="189" end1="190" start2="216" end2="217" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="191" end1="192" start2="218" end2="220" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="193" end1="196" start2="221" end2="221" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="197" end1="199" start2="222" end2="226" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="200" end1="209" start2="227" end2="290" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="210" end1="214" start2="291" end2="294" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="216" end1="217" start2="296" end2="297" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="5" end1="5" start2="5" end2="6" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="49" end1="50" start2="50" end2="51" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="94" end1="95" start2="95" end2="96" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="129" end1="129" start2="130" end2="135" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="161" end1="162" start2="167" end2="168" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="167" end1="167" start2="173" end2="175" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="168" end1="174" start2="176" end2="182" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="175" end1="178" start2="183" end2="186" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="179" end1="180" start2="187" end2="188" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="181" end1="192" start2="189" end2="200" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="193" end1="198" start2="201" end2="206" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="199" end1="200" start2="207" end2="208" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="201" end1="203" start2="209" end2="211" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="204" end1="206" start2="212" end2="213" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="208" end1="209" start2="215" end2="216" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="254" end1="255" start2="261" end2="262" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="263" end1="264" start2="270" end2="271" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="6" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="15" end1="16" start2="17" end2="18" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="39" end1="40" start2="41" end2="42" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="22" end1="22" start2="23" end2="24" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="42" end1="42" start2="44" end2="48" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="43" end1="43" start2="49" end2="57" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java">
+      <ranges>
+        <range start1="17" end1="18" start2="17" end2="18" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="49" end1="50" start2="49" end2="50" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="54" end1="55" start2="54" end2="55" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="61" end1="62" start2="61" end2="62" changelist="de619a60-41a7-4bd6-8a8f-6801f9b26b94" />
+        <range start1="80" end1="82" start2="80" end2="83" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="86" end1="87" start2="87" end2="88" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="98" end1="99" start2="99" end2="100" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
       </ranges>
     </file>
   </component>
@@ -83,34 +98,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.bastord.comment" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.bastord.comment" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="CommentProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessor" />
+  <component name="RunManager" selected="Application.Example">
+    <configuration name="DisplayFileExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.DisplayFileExample" />
       <module name="RecoverCommenti" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,15 +154,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+    <configuration name="CommentProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RecoverCommenti" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.bastord.comment.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.bastord.comment" />
+      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentProcessorTest.commentoRiga" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RecoverCommenti" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.bastord.comment" />
+      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessorTest" />
+      <option name="METHOD_NAME" value="commentoRiga" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentProcessorTest.test_line_number" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RecoverCommenti" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.bastord.comment" />
+      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessorTest" />
+      <option name="METHOD_NAME" value="test_line_number" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,8 +204,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Example" />
-        <item itemvalue="Application.CommentProcessor" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.DisplayFileExample" />
+        <item itemvalue="JUnit.CommentProcessorTest.commentoRiga" />
+        <item itemvalue="JUnit.CommentProcessorTest" />
+        <item itemvalue="JUnit.CommentProcessorTest.test_line_number" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +220,10 @@
       <option name="presentableId" value="Default" />
       <updated>1651243922442</updated>
       <workItem from="1651243923965" duration="3242000" />
-      <workItem from="1651316903335" duration="13969000" />
+      <workItem from="1651316903335" duration="20035000" />
+      <workItem from="1651565225590" duration="3464000" />
+      <workItem from="1651676490309" duration="24000" />
+      <workItem from="1651678177789" duration="4946000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -170,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651244054553</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="secondo commit">
+      <created>1651337299154</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651337299154</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +258,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="primo commit" />
+    <MESSAGE value="secondo commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="secondo commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
