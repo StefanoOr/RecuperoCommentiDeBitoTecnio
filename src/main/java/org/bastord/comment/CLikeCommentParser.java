@@ -22,6 +22,8 @@ public class CLikeCommentParser extends AbstractCommentParser {
 
         String contenuto = readAsString(reader);
 
+        //querto
+
         StringBuilder commentoAttuale = new StringBuilder();
         boolean contenutoMultiRiga = false;
         boolean contenutoRiga = false;
