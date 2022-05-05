@@ -3,6 +3,7 @@ package org.example;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
+import com.opencsv.exceptions.CsvException;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -47,7 +48,7 @@ public class Main {
 
     }
 
-    public static void cLike(String fileName) throws IOException {
+    public static void cLike(Reader reader) throws IOException,CsvException {
         //List<Boolean> multiRiga = new ArrayList<>();
         int numeroRiga = 0;
         int colonna = 0;
@@ -92,7 +93,7 @@ public class Main {
 
                     listaCommenti.add(commentoAttuale.toString());
                     commentoAttuale.setLength(0);
-                } else if (contenutoMultiRiga && (carattereAttuale == '/' && caratterePrecedente == '*')) {
+                } else if (contenutoMultiRiga && ((carattereAttuale == '/' && caratterePrecedente == '*') || ultimoCarattere)) {
                     contenutoMultiRiga = false;
                     numeroMultiRiga++;
 
@@ -127,6 +128,11 @@ public class Main {
                     listaCommenti.add(commentoAttuale.toString());
                     commentoAttuale.setLength(0);
                 } else {
+                    // se siamo in un commento multilinea ed il primo carattere è un asterisco, vuol dire
+                    //che è cominciato con /** e lo consideration un commento javadoc
+                    if (commentoAttuale.isEmpty() && contenutoMultiRiga && carattereAttuale=='*') {
+                        rimuoviAsterischi = true;
+                    }
                     commentoAttuale.append(carattereAttuale);
                 }
 
@@ -159,54 +165,55 @@ public class Main {
         csvCreate(commenti);
     }
 
-    private static void pythonType(String fileName) throws IOException {
+    private static void pythonType(Reader reader) throws IOException, CsvException {
         String contenuto;
         try (var r = new BufferedReader(reader);) {
             try (var writer = new StringWriter()) {
                 r.transferTo(writer);
                 contenuto = writer.toString();
-
-                StringBuilder commentoAttuale = new StringBuilder();
-                List<String> listaCommenti = new ArrayList<>();
-                boolean contenutoMultiRiga = false;
-                boolean contenutoRiga = false;
-                boolean inStringa = false;
-                char caratterePrecedente = 0;
-
-                for (int i = 0; i < contenuto.length(); i++) {
-                    boolean ultimoCarattere = i == contenuto.length() - 1;
-                    char carattereAttuale = contenuto.charAt(i);
-
-                    if (inStringa) {
-
-                        if (carattereAttuale == '"' && caratterePrecedente != '#') {
-                            inStringa = false;
-                        }
-                    } else if (contenutoRiga || contenutoMultiRiga) {
-                        if (contenutoRiga && ((carattereAttuale == '\n' || ultimoCarattere) || ultimoCarattere)) {
-                            contenutoRiga = false;
-                            listaCommenti.add(commentoAttuale.toString());
-                            commentoAttuale.setLength(0);
-                        } else {
-                            commentoAttuale.append(carattereAttuale);
-                        }
-
-                    } else if (carattereAttuale == '#') {
-                        contenutoRiga = true;
-                    } else if (carattereAttuale == '"') {
-                        inStringa = true;
-                    }
-
-                    caratterePrecedente = carattereAttuale;
-
-                }
-                //stampaCommenti(listaCommenti);
-
             }
         }
+
+        StringBuilder commentoAttuale = new StringBuilder();
+        List<String> listaCommenti = new ArrayList<>();
+        boolean contenutoMultiRiga = false;
+        boolean contenutoRiga = false;
+        boolean inStringa = false;
+        char caratterePrecedente = 0;
+
+        for (int i = 0; i < contenuto.length(); i++) {
+            boolean ultimoCarattere = i == contenuto.length() - 1;
+            char carattereAttuale = contenuto.charAt(i);
+
+            if (inStringa) {
+
+                if (carattereAttuale == '"' && caratterePrecedente != '#') {
+                    inStringa = false;
+                }
+            } else if (contenutoRiga || contenutoMultiRiga) {
+                if (contenutoRiga && ((carattereAttuale == '\n' || ultimoCarattere) || ultimoCarattere)) {
+                    contenutoRiga = false;
+                    listaCommenti.add(commentoAttuale.toString());
+                    commentoAttuale.setLength(0);
+                } else {
+                    commentoAttuale.append(carattereAttuale);
+                }
+
+            } else if (carattereAttuale == '#') {
+                contenutoRiga = true;
+            } else if (carattereAttuale == '"') {
+                inStringa = true;
+            }
+
+            caratterePrecedente = carattereAttuale;
+
+        }
+        //stampaCommenti(listaCommenti);
+
+
     }
 
-    public static void csvCreate(List<Commento> commenti) throws IOException {
+    public static void csvCreate(List<Commento> commenti) throws IOException, CsvException {
 
         /* first create file object for file placed at location
         // specified by filepath
@@ -252,7 +259,7 @@ public class Main {
 
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException,CsvException {
 
         String fileName = "C:\\Users\\ste_1\\Desktop\\DemoJava.java";
         System.out.println("Nome del file=" + fileName + ". Tipo di file= " + getFileExtension(fileName));

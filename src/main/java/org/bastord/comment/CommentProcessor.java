@@ -4,6 +4,7 @@ import javax.annotation.processing.Filer;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +42,19 @@ public class CommentProcessor {
         }
     }
 
+    public static Comments process(String input, String fileType) {
+        var parser = parsers.get(fileType);
+        if (parser==null)
+            throw new IllegalArgumentException("No parser available for fileType: " + fileType);
 
+        try (var reader = new StringReader(input)) {
+            try {
+                return new Comments("<String>", parser.parse(reader));
+            } catch (IOException e) {
+                throw new RuntimeException("Error reading from String", e);
+            }
+        }
+    }
 
     private static String getFileExtension(File file) {
         String fileName = file.getName();

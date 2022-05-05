@@ -59,7 +59,7 @@ public class CLikeCommentParser extends AbstractCommentParser {
                     }
 
                     //COMMENTO MULTI RIGA
-                    String commento = commentoAttuale.toString();
+                    String commento = commentoAttuale.toString().stripIndent();
 
                     //Rasael: rimuovi asterischi dai commenti javadoc
                     if (rimuoviAsterischi) {

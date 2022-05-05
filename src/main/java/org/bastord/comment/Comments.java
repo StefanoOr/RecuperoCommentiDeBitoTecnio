@@ -2,6 +2,8 @@ package org.bastord.comment;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
+import com.opencsv.exceptions.CsvException;
+import com.opencsv.exceptions.CsvValidationException;
 import org.example.Main;
 
 import java.io.*;
@@ -37,7 +39,7 @@ public record Comments(String filename, List<Comment> comments) {
         }
     }
 
-    public static List<Comment> readFromCSV(Reader reader) throws IOException {
+    public static List<Comment> readFromCSV(Reader reader) throws IOException, CsvException {
         try (var csvReader = new CSVReader(reader)) {
             List<Comment> comments = new ArrayList<>();
             csvReader.readNext(); // ignore the header
