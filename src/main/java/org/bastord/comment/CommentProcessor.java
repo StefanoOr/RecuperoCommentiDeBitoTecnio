@@ -31,7 +31,8 @@ public class CommentProcessor {
         // Determine the file type
         String fileType = getFileExtension(file);
         if (fileType.isEmpty())
-            throw new IllegalArgumentException("Cannot determine file type for: " + file.getAbsolutePath());
+            return  null;
+           // throw new IllegalArgumentException("Cannot determine file type for: " + file.getAbsolutePath());
 
         var parser = parsers.get(fileType);
         if (parser==null) {

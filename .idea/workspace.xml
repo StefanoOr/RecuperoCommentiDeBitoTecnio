@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="AGGIUNTO LETTURA SOTTO DIRECTORY">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="Aggiunto creazione delle  sotto directorty">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DisplayFileExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/DisplayFileExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/Main.java" afterDir="false" />
     </list>
-    <list id="de619a60-41a7-4bd6-8a8f-6801f9b26b94" name="Changes by Rasael" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +166,7 @@
       <workItem from="1651565225590" duration="3464000" />
       <workItem from="1651676490309" duration="24000" />
       <workItem from="1651678177789" duration="7821000" />
-      <workItem from="1651926699505" duration="20343000" />
+      <workItem from="1651926699505" duration="21667000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -214,7 +210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651930897871</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Aggiunto creazione delle  sotto directorty">
+      <created>1651948914507</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651948914507</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Aggiunto creazione delle  sotto directorty">
+      <created>1651948938802</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651948938802</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +247,8 @@
     <MESSAGE value="Changes" />
     <MESSAGE value="terzo commit" />
     <MESSAGE value="AGGIUNTO LETTURA SOTTO DIRECTORY" />
-    <option name="LAST_COMMIT_MESSAGE" value="AGGIUNTO LETTURA SOTTO DIRECTORY" />
+    <MESSAGE value="Aggiunto creazione delle  sotto directorty" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto creazione delle  sotto directorty" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

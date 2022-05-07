@@ -12,7 +12,7 @@ public class Example {
         String fileName,directoryCsv;
 
         //path della cartella
-         String directory = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio";
+         String directory = "C:\\Users\\ste_1\\Desktop\\IumPalestrati-main";
 
 
 
@@ -68,7 +68,7 @@ public class Example {
 
 
                     // Scrivi i commento su un file CSV
-                    File cvsTest = cambiaPercorsoFile(a[i],FdirectoryCsv.getName(),new File(directory));
+                    File cvsTest = cambiaPercorsoFile(a[i],FdirectoryCsv.getName(),new File(directory),".csv");
                     commenti.writeToCSV(new FileWriter(cvsTest, StandardCharsets.UTF_8));
 
                     try (var reader = new FileReader(cvsTest)) {
@@ -84,7 +84,7 @@ public class Example {
                 System.out.println("[" + a[i].getName() + "]");
                 // ricorsione per le sottodirectory
 
-               File directoryNew= cambiaPercorsoFile(a[i],FdirectoryCsv.getName(),new File(directory));
+               File directoryNew= cambiaPercorsoFile(a[i],FdirectoryCsv.getName(),new File(directory),"");
 
                 boolean D1 = directoryNew.mkdir();
                 if(D1){
@@ -108,7 +108,7 @@ public class Example {
      * @param cartella
      * @return
      */
-    public static File cambiaPercorsoFile(File file, String cartellaDiUscita, File cartella) {
+    public static File cambiaPercorsoFile(File file, String cartellaDiUscita, File cartella,String csv) {
 
 
         String primaParte = cartella.getParent()+ File.separator;
@@ -116,7 +116,7 @@ public class Example {
         int i = cartella.getPath().length();
         String  secondaParte=file.getPath().substring(i);
 
-        return new File(primaParte + cartellaDiUscita + secondaParte);
+        return new File(primaParte + cartellaDiUscita + secondaParte+csv);
 
     }
 
