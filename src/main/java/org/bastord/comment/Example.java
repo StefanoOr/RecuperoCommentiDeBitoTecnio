@@ -12,7 +12,7 @@ public class Example {
         String fileName,directoryCsv;
 
         //path della cartella
-         String directory = "C:\\Users\\ste_1\\Desktop\\IumPalestrati-main";
+         String directory = "C:\\Users\\ste_1\\Desktop\\PalestratiProgettoIum";
 
 
 
