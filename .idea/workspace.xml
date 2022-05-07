@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="terzo commit">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="AGGIUNTO LETTURA SOTTO DIRECTORY">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DisplayFileExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DisplayFileExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DisplayFileExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/DisplayFileExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/Main.java" afterDir="false" />
     </list>
     <list id="de619a60-41a7-4bd6-8a8f-6801f9b26b94" name="Changes by Rasael" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,19 +70,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Example">
-    <configuration name="DisplayFileExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.DisplayFileExample" />
-      <module name="RecoverCommenti" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.bastord.comment.Example" />
       <module name="RecoverCommenti" />
@@ -94,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClonaCartelleTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RecoverCommenti" />
       <extension name="coverage">
         <pattern>
@@ -103,29 +92,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.bastord.comment" />
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommentProcessorTest.commentoRiga" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RecoverCommenti" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.bastord.comment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.bastord.comment" />
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessorTest" />
-      <option name="METHOD_NAME" value="commentoRiga" />
+      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.ClonaCartelleTest" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentProcessorTest.test_line_number" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClonaCartelleTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RecoverCommenti" />
       <extension name="coverage">
         <pattern>
@@ -134,8 +108,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.bastord.comment" />
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessorTest" />
-      <option name="METHOD_NAME" value="test_line_number" />
+      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.ClonaCartelleTest" />
+      <option name="METHOD_NAME" value="test4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClonaCartelleTest.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RecoverCommenti" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.bastord.comment" />
+      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.ClonaCartelleTest" />
+      <option name="METHOD_NAME" value="test5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClonaCartelleTest.test6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RecoverCommenti" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.bastord.comment" />
+      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.ClonaCartelleTest" />
+      <option name="METHOD_NAME" value="test6" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,10 +150,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Example" />
-        <item itemvalue="Application.DisplayFileExample" />
-        <item itemvalue="JUnit.CommentProcessorTest.commentoRiga" />
-        <item itemvalue="JUnit.CommentProcessorTest" />
-        <item itemvalue="JUnit.CommentProcessorTest.test_line_number" />
+        <item itemvalue="JUnit.ClonaCartelleTest.test6" />
+        <item itemvalue="JUnit.ClonaCartelleTest.test5" />
+        <item itemvalue="JUnit.ClonaCartelleTest.test4" />
+        <item itemvalue="JUnit.ClonaCartelleTest.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +170,7 @@
       <workItem from="1651565225590" duration="3464000" />
       <workItem from="1651676490309" duration="24000" />
       <workItem from="1651678177789" duration="7821000" />
-      <workItem from="1651926699505" duration="3705000" />
+      <workItem from="1651926699505" duration="20343000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -201,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651763022796</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="AGGIUNTO LETTURA SOTTO DIRECTORY">
+      <created>1651930897871</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651930897871</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,17 +236,52 @@
     <MESSAGE value="secondo commit" />
     <MESSAGE value="Changes" />
     <MESSAGE value="terzo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="terzo commit" />
+    <MESSAGE value="AGGIUNTO LETTURA SOTTO DIRECTORY" />
+    <option name="LAST_COMMIT_MESSAGE" value="AGGIUNTO LETTURA SOTTO DIRECTORY" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java</url>
-          <line>50</line>
+          <line>46</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/ClonaCartelleTest.java</url>
+          <line>34</line>
+          <properties class="org.bastord.comment.ClonaCartelleTest" method="test3">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RecoverCommenti$Example.ic" NAME="Example Coverage Results" MODIFIED="1651935702670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.bastord.comment.*</FILTER>
+    </SUITE>
   </component>
 </project>

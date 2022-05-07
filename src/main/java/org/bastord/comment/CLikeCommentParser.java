@@ -1,11 +1,7 @@
 package org.bastord.comment;
 
-import org.example.Main;
-
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
