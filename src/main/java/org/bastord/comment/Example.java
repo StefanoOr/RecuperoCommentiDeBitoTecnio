@@ -12,7 +12,7 @@ public class Example {
         String fileName,directoryCsv;
 
         //path della cartella
-         String directory = "C:\\Users\\ste_1\\Desktop\\PalestratiProgettoIum";
+         String directory = "C:\\Users\\ste_1\\Desktop\\binance-java-api-master";
 
 
 
@@ -39,6 +39,32 @@ public class Example {
                 obj.printFileNames(a,0,0,FdirectoryCsv,directory);
             }
 
+
+
+        fileName = "C:\\Users\\ste_1\\Desktop\\bitcoin-master\\test\\functional\\feature_block.py";
+
+        // Leggi i commenti da un File
+        File file = new File(fileName);
+        Comments commenti = CommentProcessor.process(file);
+
+        // Stampa i commenti (per debug)
+        System.out.println("Abbiamo letto i commenti di: " + commenti.filename());
+        commenti.print();
+
+        // Scrivi i commento su un file CSV
+        File csvFile = new File(fileName + ".csv");
+        commenti.writeToCSV(new FileWriter(csvFile, StandardCharsets.UTF_8));
+
+        // Leggi i commenti dal file CSV
+        try (var reader = new FileReader(csvFile)) {
+       commenti = new Comments(csvFile.getName(), Comments.readFromCSV(reader));
+            System.out.println("Abbiamo letto i commenti di: " + commenti.filename());
+            commenti.print();
+        }
+
+
+
+
         }
 
         public void printFileNames (File[] a,int i, int lvl,File FdirectoryCsv,String directory) throws Exception {
@@ -64,7 +90,7 @@ public class Example {
                 // Stampa i commenti (per debug)
                 if(commenti!=null) {
                     System.out.println("\nLeggiamo di commenti di: " + commenti.filename());
-                    commenti.print();
+                  //  commenti.print();
 
 
                     // Scrivi i commento su un file CSV

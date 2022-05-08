@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="Risolto bug creazione file csv">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/PythonCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/PythonCommentParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +168,10 @@
       <workItem from="1651565225590" duration="3464000" />
       <workItem from="1651676490309" duration="24000" />
       <workItem from="1651678177789" duration="7821000" />
-      <workItem from="1651926699505" duration="22333000" />
+      <workItem from="1651926699505" duration="27725000" />
+      <workItem from="1652010038102" duration="904000" />
+      <workItem from="1652019071898" duration="879000" />
+      <workItem from="1652020477193" duration="2044000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -230,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651953262618</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Risolto bug creazione file csv">
+      <created>1651954005794</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1651954005794</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,29 +274,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>113</line>
+          <line>139</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>86</line>
+          <line>112</line>
           <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/ClonaCartelleTest.java</url>

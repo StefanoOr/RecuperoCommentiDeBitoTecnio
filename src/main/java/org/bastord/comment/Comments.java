@@ -40,6 +40,9 @@ public record Comments(String filename, List<Comment> comments) {
             List<Comment> comments = new ArrayList<>();
             csvReader.readNext(); // ignore the header
             for (String[] riga : csvReader.readAll()) {
+                if(riga[0].equals("1340") ){
+                    System.out.println("ciao");
+                }
                 comments.add(new Comment(
                         Integer.parseInt(riga[0]), // line
                         Integer.parseInt(riga[1]), // column

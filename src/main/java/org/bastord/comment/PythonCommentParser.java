@@ -14,11 +14,17 @@ public class PythonCommentParser extends AbstractCommentParser {
         String contenuto = readAsString(reader);
 
         StringBuilder commentoAttuale = new StringBuilder();
-        List<Comment> listaCommenti = new ArrayList<>();
+        var commenti = new ArrayList<Comment>();
         boolean contenutoMultiRiga = false;
         boolean contenutoRiga = false;
         boolean inStringa = false;
         char caratterePrecedente = 0;
+
+        int numeroRiga = 1;
+        int colonna = 0;
+        int colonnaCommento = 0;
+        int numeroMultiRiga = 1;
+
 
         for (int i = 0; i < contenuto.length(); i++) {
             boolean ultimoCarattere = i == contenuto.length() - 1;
@@ -34,22 +40,30 @@ public class PythonCommentParser extends AbstractCommentParser {
                     contenutoRiga = false;
                     String commento = commentoAttuale.toString();
                     int numeroRighe = Math.toIntExact(commento.lines().count());
-                    listaCommenti.add(new Comment(-1, -1, numeroRighe, commento));
+                    commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commentoAttuale.toString()));
                     commentoAttuale.setLength(0);
                 } else {
                     commentoAttuale.append(carattereAttuale);
                 }
 
             } else if (carattereAttuale == '#') {
+                colonnaCommento = colonna;
                 contenutoRiga = true;
             } else if (carattereAttuale == '"') {
                 inStringa = true;
             }
 
             caratterePrecedente = carattereAttuale;
+            colonna++;
+
+            if (carattereAttuale == '\n') {
+
+                colonna = 0;
+                numeroRiga++;
+            }
 
         }
 
-        return listaCommenti;
+        return commenti;
     }
 }
