@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="Risolto bug creazione file csv">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment=" Update PythonCommentParser.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/PythonCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/PythonCommentParser.java" afterDir="false" />
     </list>
@@ -171,7 +169,8 @@
       <workItem from="1651926699505" duration="27725000" />
       <workItem from="1652010038102" duration="904000" />
       <workItem from="1652019071898" duration="879000" />
-      <workItem from="1652020477193" duration="2044000" />
+      <workItem from="1652020477193" duration="5596000" />
+      <workItem from="1652118907594" duration="1153000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -243,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651954005794</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary=" Update PythonCommentParser.java">
+      <created>1652026679183</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652026679183</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,21 +274,12 @@
     <MESSAGE value="AGGIUNTO LETTURA SOTTO DIRECTORY" />
     <MESSAGE value="Aggiunto creazione delle  sotto directorty" />
     <MESSAGE value="Risolto bug creazione file csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="Risolto bug creazione file csv" />
+    <MESSAGE value=" Update PythonCommentParser.java" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Update PythonCommentParser.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>139</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/ClonaCartelleTest.java</url>
           <line>34</line>
@@ -291,6 +288,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -12,7 +12,7 @@ public class Example {
         String fileName,directoryCsv;
 
         //path della cartella
-         String directory = "C:\\Users\\ste_1\\Desktop\\binance-java-api-master";
+         String directory = "C:\\Users\\ste_1\\Desktop\\bitcoin-master";
 
 
 
@@ -37,35 +37,37 @@ public class Example {
 
 
                 obj.printFileNames(a,0,0,FdirectoryCsv,directory);
-            }
+            }else {
 
 
+            fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\PhytonDemo.py ";
 
-        fileName = "C:\\Users\\ste_1\\Desktop\\bitcoin-master\\test\\functional\\feature_block.py";
+            // Leggi i commenti da un File
+            File file = new File(fileName);
+            Comments commenti = CommentProcessor.process(file);
 
-        // Leggi i commenti da un File
-        File file = new File(fileName);
-        Comments commenti = CommentProcessor.process(file);
-
-        // Stampa i commenti (per debug)
-        System.out.println("Abbiamo letto i commenti di: " + commenti.filename());
-        commenti.print();
-
-        // Scrivi i commento su un file CSV
-        File csvFile = new File(fileName + ".csv");
-        commenti.writeToCSV(new FileWriter(csvFile, StandardCharsets.UTF_8));
-
-        // Leggi i commenti dal file CSV
-        try (var reader = new FileReader(csvFile)) {
-       commenti = new Comments(csvFile.getName(), Comments.readFromCSV(reader));
+            // Stampa i commenti (per debug)
             System.out.println("Abbiamo letto i commenti di: " + commenti.filename());
             commenti.print();
+
+            // Scrivi i commento su un file CSV
+            File csvFile = new File(fileName + ".csv");
+            commenti.writeToCSV(new FileWriter(csvFile, StandardCharsets.UTF_8));
+
+            // Leggi i commenti dal file CSV
+         var reader = new FileReader(csvFile);
+                commenti = new Comments(csvFile.getName(), Comments.readFromCSV(reader));
+                System.out.println("Abbiamo letto i commenti di: " + commenti.filename());
+                commenti.print();
+
+
+            }
         }
 
 
 
 
-        }
+
 
         public void printFileNames (File[] a,int i, int lvl,File FdirectoryCsv,String directory) throws Exception {
             // caso base della ricorsione
@@ -84,7 +86,7 @@ public class Example {
                 System.out.print("\t");
             }
             // verifica se l'oggetto incontrato è un file o meno
-            if (a[i].isFile()) {
+            if (a[i].isFile() ) {
 
                 Comments commenti = CommentProcessor.process(file);
                 // Stampa i commenti (per debug)
@@ -97,11 +99,17 @@ public class Example {
                     File cvsTest = cambiaPercorsoFile(a[i],FdirectoryCsv.getName(),new File(directory),".csv");
                     commenti.writeToCSV(new FileWriter(cvsTest, StandardCharsets.UTF_8));
 
-                    try (var reader = new FileReader(cvsTest)) {
+                  var reader = new FileReader(cvsTest);
+                       if(a[i].getName().equals("feature_block.py")){
+                           System.out.println("test");
+                       }
                         commenti = new Comments(cvsTest.getName(), Comments.readFromCSV(reader));
                         commenti.print();
+
                     }
-                }
+
+
+
 
             }
 

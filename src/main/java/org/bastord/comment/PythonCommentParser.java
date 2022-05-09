@@ -35,11 +35,10 @@ public class PythonCommentParser extends AbstractCommentParser {
                 if (carattereAttuale == '"' && caratterePrecedente != '#') {
                     inStringa = false;
                 }
-            } else if (contenutoRiga || contenutoMultiRiga) {
+            } else if (contenutoRiga) {
                 if (contenutoRiga && ((carattereAttuale == '\n' || ultimoCarattere) )) {
                     contenutoRiga = false;
-                    String commento = commentoAttuale.toString();
-                    int numeroRighe = Math.toIntExact(commento.lines().count());
+
                     commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commentoAttuale.toString()));
                     commentoAttuale.setLength(0);
                 } else {
