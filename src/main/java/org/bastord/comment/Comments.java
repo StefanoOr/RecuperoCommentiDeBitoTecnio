@@ -36,11 +36,16 @@ public record Comments(String filename, List<Comment> comments) {
     }
 
     public static List<Comment> readFromCSV(Reader reader) throws IOException, CsvException {
-        try (var csvReader = new CSVReader(reader)) {
-            List<Comment> comments = new ArrayList<>();
+
+        List<Comment> comments;
+        var csvReader = new CSVReader(reader);
+
+
+           comments = new ArrayList<>();
             csvReader.readNext(); // ignore the header
+        try {
             for (String[] riga : csvReader.readAll()) {
-                if(riga[0].equals("1340") ){
+                if (riga[0].equals("1340")) {
                     System.out.println("ciao");
                 }
                 comments.add(new Comment(
@@ -51,6 +56,11 @@ public record Comments(String filename, List<Comment> comments) {
                 );
             }
             return comments;
+        } finally {
+
         }
+
     }
+
+
 }

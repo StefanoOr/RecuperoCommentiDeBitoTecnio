@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 
 public class Example {
 
@@ -11,36 +12,47 @@ public class Example {
     public static void main(String[] args) throws Exception {
         String fileName,directoryCsv;
 
+        //path del file
+        fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\provaSito.html";
+
         //path della cartella
-         String directory = "C:\\Users\\ste_1\\Desktop\\bitcoin-master";
+        String directory = "C:\\Users\\ste_1\\Desktop\\bitcoin-master";
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Inserisci \n 1 Directory\n 2 file" );
+
+        int userName = input.nextInt();
 
 
+    if(userName==1) {
 
-
-        //fileName = "C:\\Users\\ste_1\\Desktop\\PhytonDemo.py";
-        //fileName = "C:\\Users\\ste_1\\Desktop\\DemoJava.java";
 
         File directoryPath = new File(directory);
-        directoryCsv=directoryPath.getName()+"CSV";
+        directoryCsv = directoryPath.getName() + "CSV";
         Example obj = new Example();
 
         if (directoryPath.exists() && directoryPath.isDirectory()) {
             File a[] = directoryPath.listFiles();//prendo tutti i file della directory
 
-            File FdirectoryCsv = new File(directoryPath.getParent()+File.separator+directoryCsv);//creo la  directory  clone
+            File FdirectoryCsv = new File(directoryPath.getParent() + File.separator + directoryCsv);//creo la  directory  clone
             boolean D1 = FdirectoryCsv.mkdir();
-            if(D1){
+            if (D1) {
                 System.out.println("Directory is created successfully");
-            }else{
+            } else {
                 System.out.println("Error !");
             }
 
 
-                obj.printFileNames(a,0,0,FdirectoryCsv,directory);
-            }else {
+            obj.printFileNames(a, 0, 0, FdirectoryCsv, directory);
+        }
+
+    }else {
 
 
-            fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\PhytonDemo.py ";
+
+            //TODO Test da eliminare , pezzo di ccodice per la lettura di un file singolo
+
+
 
             // Leggi i commenti da un File
             File file = new File(fileName);

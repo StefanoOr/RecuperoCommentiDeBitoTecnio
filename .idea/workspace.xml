@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment=" Update PythonCommentParser.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/HtmlCommentParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/PythonCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/PythonCommentParser.java" afterDir="false" />
     </list>
@@ -60,6 +63,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ste_1\IdeaProjects\RecoverCommenti\target\classes\org\bastord\comment" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.bastord.comment" />
@@ -171,6 +177,13 @@
       <workItem from="1652019071898" duration="879000" />
       <workItem from="1652020477193" duration="5596000" />
       <workItem from="1652118907594" duration="1153000" />
+      <workItem from="1652125349759" duration="359000" />
+      <workItem from="1652125722137" duration="212000" />
+      <workItem from="1652125947863" duration="2727000" />
+      <workItem from="1652256334739" duration="3129000" />
+      <workItem from="1652431805498" duration="595000" />
+      <workItem from="1652632848575" duration="8764000" />
+      <workItem from="1652727016274" duration="3914000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -249,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652026679183</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary=" Update PythonCommentParser.java">
+      <created>1652125363464</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652125363464</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,11 +311,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>103</line>
+          <line>115</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/PythonCommentParser.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.opencsv.CSVReader" memberName="br" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RecoverCommenti$Example.ic" NAME="Example Coverage Results" MODIFIED="1651935702670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

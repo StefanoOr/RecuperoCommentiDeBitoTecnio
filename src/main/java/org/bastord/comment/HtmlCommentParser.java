@@ -1,16 +1,18 @@
 package org.bastord.comment;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class PythonCommentParser extends AbstractCommentParser {
+
+public class HtmlCommentParser extends AbstractCommentParser{
+
 
     @Override
     public List<Comment> parse(Reader reader) throws IOException {
+        //List<Boolean> multiRiga = new ArrayList<>();
         String contenuto = readAsString(reader);
 
         StringBuilder commentoAttuale = new StringBuilder();
@@ -20,6 +22,7 @@ public class PythonCommentParser extends AbstractCommentParser {
         boolean inStringa = false;
         char caratterePrecedente = 0;
         char caratterePrePrecedente=0;
+        char caratterePrePrePrePrecendente=0;
 
         int numeroRiga = 1;
         int colonna = 0;
@@ -48,10 +51,10 @@ public class PythonCommentParser extends AbstractCommentParser {
 
                     commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commentoAttuale.toString()));
                     commentoAttuale.setLength(0);
-                } else if (contenutoMultiRiga && ((carattereAttuale == '"' && caratterePrecedente=='"' && caratterePrePrecedente== '"') || ultimoCarattere)) {
+                } else if (contenutoMultiRiga && ((carattereAttuale == '>' && caratterePrecedente=='-' && caratterePrePrecedente== '-') || ultimoCarattere)) {
                     contenutoMultiRiga = false;
 
-                    if (carattereAttuale == '"') {
+                    if (carattereAttuale == '>') {
                         commentoAttuale.setLength(commentoAttuale.length() - 1);
                     }
                     //COMMENTO MULTI RIGA
@@ -63,16 +66,13 @@ public class PythonCommentParser extends AbstractCommentParser {
                     commentoAttuale.setLength(0);
                     commentoAttuale.append(carattereAttuale);
 
+
                 }else{
                     commentoAttuale.append(carattereAttuale);
                 }
 
 
-
-            } else if (carattereAttuale == '#' ) {
-                colonnaCommento = colonna;
-                contenutoRiga = true;
-            }else if (carattereAttuale=='"' && caratterePrecedente=='"' && caratterePrePrecedente=='"') {
+            }else if (carattereAttuale == '-' && caratterePrecedente=='-' && caratterePrePrecedente== '!' && caratterePrePrePrePrecendente=='<') {
 
                 colonnaCommento = colonna;
                 contenutoMultiRiga = true;
@@ -81,6 +81,7 @@ public class PythonCommentParser extends AbstractCommentParser {
                 inStringa = true;
             }
 
+            caratterePrePrePrePrecendente=caratterePrePrecedente;
             caratterePrePrecedente=caratterePrecedente;
             caratterePrecedente = carattereAttuale;
             colonna++;
@@ -97,5 +98,7 @@ public class PythonCommentParser extends AbstractCommentParser {
         }
 
         return commenti;
+
+
     }
 }
