@@ -18,7 +18,7 @@ public class HtmlCommentParser extends AbstractCommentParser {
         StringBuilder commentoAttuale = new StringBuilder();
         var commenti = new ArrayList<Comment>();
 
-        boolean rimuoviAsterischi=false;
+        boolean rimuoviAsterischi = false;
         boolean contenutoMultiRiga = false;
         boolean contenutoRiga = false;
         boolean inStringa = false;
@@ -38,6 +38,8 @@ public class HtmlCommentParser extends AbstractCommentParser {
         int totaleNumeroRigheFile = numeroRigheFile(contenuto);
         var rigaInizioScript = new ArrayList<Integer>();
         var rigaFineScript = new ArrayList<Integer>();
+        var colonnaInizioScript = new ArrayList<Integer>();
+        var colonnaFineScript = new ArrayList<Integer>();
 
         //splittiamo tutta la stringa per ricavare le singole righe di codice
         String[] strings = contenuto.split("\n");
@@ -45,11 +47,12 @@ public class HtmlCommentParser extends AbstractCommentParser {
         //ciclo per trovare l'inizio e la fine degli script
         for (int j = 0; j < totaleNumeroRigheFile; j++) {
 
-            if (strings[j].contentEquals("<script>\r")) {
+            if (strings[j].contains("<script>")) {
                 rigaInizioScript.add(j + 1);
             }
-            if (strings[j].contentEquals("</script>\r")) {
+            if (strings[j].contains("</script>")) {
                 rigaFineScript.add(j + 1);
+
 
             }
 
@@ -65,7 +68,7 @@ public class HtmlCommentParser extends AbstractCommentParser {
                 if (carattereAttuale == '"' && caratterePrecedente != '\\') {
                     inStringa = false;
                 }
-            } else if (contenutoRiga || contenutoMultiRiga ) {
+            } else if (contenutoRiga || contenutoMultiRiga) {
                 //fine del commento singolo Javascript all'interno del corpo <script> //
                 if (contenutoRiga && ((carattereAttuale == '\n' || ultimoCarattere)) && inScript) {
                     contenutoRiga = false;
@@ -76,8 +79,8 @@ public class HtmlCommentParser extends AbstractCommentParser {
                     contenutoMultiRiga = false;
 
 
-                    if (carattereAttuale=='/') {
-                        commentoAttuale.setLength(commentoAttuale.length()-1);
+                    if (carattereAttuale == '/') {
+                        commentoAttuale.setLength(commentoAttuale.length() - 1);
                     }
 
                     //COMMENTO MULTI RIGA
@@ -102,13 +105,13 @@ public class HtmlCommentParser extends AbstractCommentParser {
                     }
 
 
-                    commenti.add(new Comment(numeroRiga-numeroMultiRiga+1, colonnaCommento, numeroMultiRiga, commento));
+                    commenti.add(new Comment(numeroRiga - numeroMultiRiga + 1, colonnaCommento, numeroMultiRiga, commento));
                     numeroMultiRiga = 1;
                     rimuoviAsterischi = false; // disabilita il flag per i prossimi commenti
 
                     commentoAttuale.setLength(0);
 
-                //--> fine del commento html stile
+                    //--> fine del commento html stile
                 } else if (contenutoMultiRiga && ((carattereAttuale == '>' && caratterePrecedente == '-' && caratterePrePrecedente == '-') || ultimoCarattere)) {
                     contenutoMultiRiga = false;
 
@@ -130,7 +133,7 @@ public class HtmlCommentParser extends AbstractCommentParser {
                 } else {
                     // se siamo in un commento multilinea ed il primo carattere è un asterisco, vuol dire
                     //che è cominciato con /** e lo consideration un commento javadoc
-                    if (commentoAttuale.isEmpty() && contenutoMultiRiga && carattereAttuale=='*') {
+                    if (commentoAttuale.isEmpty() && contenutoMultiRiga && carattereAttuale == '*') {
                         rimuoviAsterischi = true;
                     }
                     commentoAttuale.append(carattereAttuale);
@@ -157,10 +160,17 @@ public class HtmlCommentParser extends AbstractCommentParser {
             } else if (carattereAttuale == '"') {
                 inStringa = true;
                 //controllo se la riga contiene l'inizio del corpo dello script
+            } else if (rigaInizioScript.contains(numeroRiga) && (rigaFineScript.contains(numeroRiga)) ) {
+              if(carattereAttuale=='>' && caratterePrecedente=='t' && caratterePrePrecedente=='p' && caratterePrePrePrePrecendente=='i'){
+                  inScript=false;
+
+
+              }
+
             } else if (rigaInizioScript.contains(numeroRiga)) {
                 inScript = true;
             } else if (rigaFineScript.contains(numeroRiga)) {
-               inScript=false;
+                inScript = false;
 
             }
 
@@ -201,5 +211,32 @@ public class HtmlCommentParser extends AbstractCommentParser {
 
 
         return numeroRighe;
+    }
+
+
+    //funzione che mi ritorna un array int , ogni valore all'interno dell'array
+    //equivale al numero di colonna dove inizia la stringa nella riga passata al metodo
+    public ArrayList<Integer> colonnineScript(String str, String commento) {
+        var colonnina = new ArrayList<Integer>();
+        int colonna = 0;
+
+        char[] ch = new char[str.length()];
+
+        // Copying character by character into array
+        // using for each loop
+        for (int i = 0; i < str.length(); i++) {
+            ch[i] = str.charAt(i);
+        }
+
+
+        for (int i = 0; i < commento.length(); i++) {
+            char carattereAttuale = commento.charAt(i);
+
+
+            colonna++;
+        }
+
+        return colonnina;
+
     }
 }
