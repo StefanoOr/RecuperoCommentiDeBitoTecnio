@@ -105,6 +105,21 @@ public class ParserHtml {
             }
         }
 
+        record Script(Cursore da, Cursore a, String script) {
+        }
+
+        ;
+
+        private String leggiScript() throws IOException {
+            var sb = new StringBuilder();
+            while (!sb.toString().toLowerCase().endsWith("</script>")) {
+                avanza();
+                sb.append(attuale);
+            }
+            avanza();
+            return sb.substring(0, sb.length() - "</script>".length());
+        }
+
         record Commento(Cursore da, Cursore a, String testo) {
         }
 
@@ -113,9 +128,9 @@ public class ParserHtml {
         private Commento leggiCommento() throws IOException {
             var inizio = cursore;
 
-            attendi('!');
-            attendi('-');
-            attendi('-');
+            aspettati('!');
+            aspettati('-');
+            aspettati('-');
 
             StringBuilder commento = new StringBuilder();
             while (!commento.toString().endsWith("-->")) {
@@ -124,7 +139,7 @@ public class ParserHtml {
             return new Commento(inizio, cursore, commento.substring(0, commento.length() - 3));
         }
 
-        private void attendi(char c) throws IOException {
+        private void aspettati(char c) throws IOException {
             avanza();
             if (attuale != c) {
                 throw documentoInvalido("Atteso '" + c + "' ma era '" + attuale + "'");
@@ -179,9 +194,8 @@ public class ParserHtml {
                 } else if (èUnaLettera(attuale)) {
                     attributi.add(leggiAttributo());
                     continue;
-                }
-                else if (attuale=='/') {
-                    attendi('>');
+                } else if (attuale == '/') {
+                    aspettati('>');
                     return new InizioTag(posizione, cursore, nomeTag, attributi, sì);
                 } else if (attuale == '>') {
                     return new InizioTag(posizione, cursore, nomeTag, attributi, no);

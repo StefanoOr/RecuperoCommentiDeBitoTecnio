@@ -39,7 +39,7 @@ class ParserHtmlTest {
                 <br/>altro testo</xyz>
                                 
                 <script>
-                  prova
+                  prova <!-- con un commento -->
                 </script>
                 """;
         System.out.println(input);
