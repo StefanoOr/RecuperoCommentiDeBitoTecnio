@@ -26,14 +26,14 @@ public class ParserHtml {
         tokenizer.next();
     }
 
-    record Cursore(int riga, int colonna){
+    record Cursore(int riga, int colonna) {
 
         public Cursore avanza(char c) {
 
             int nuovaColonna = colonna + 1;
             int nuovaRiga = riga;
 
-            if (c=='\n') {
+            if (c == '\n') {
                 nuovaRiga = riga + 1;
                 nuovaColonna = 1;
             }
@@ -43,12 +43,14 @@ public class ParserHtml {
         public Cursore colonnaPrecedente() {
             return new Cursore(riga, colonna - 1);
         }
-    };
+    }
+
+    ;
 
     static class Tokenizer {
 
         private final Reader reader;
-        private Cursore cursore = new Cursore(1,1);
+        private Cursore cursore = new Cursore(1, 1);
         private char attuale;
         private char precedente;
         private Stack<InizioTag> daChiudere = new Stack<>();
@@ -56,15 +58,16 @@ public class ParserHtml {
         private boolean oracolo;
 
         Tokenizer(String s) {
-           this(new StringReader(s));
+            this(new StringReader(s));
         }
+
         Tokenizer(Reader reader) {
             this.reader = reader;
         }
 
         public void next() throws IOException {
             avanza();
-            while(true) {
+            while (true) {
 
                 if (èLaFine(attuale)) {
                     break;
@@ -72,33 +75,40 @@ public class ParserHtml {
                 //controllo  di inizio tag
                 else if (attuale == '<') {
 
-                    if (prossimo()=='!') {
+                    if (prossimo() == '!') {
                         Commento commento = leggiCommento();
                         System.out.println(commento);
-                    }
-                    else {
+                    } else {
                         InizioTag tag = leggiTag();
                         if (tag != null) {
                             if (!tag.giàChiuso) daChiudere.push(tag);
                             System.out.println(tag);
                             if ("script".equalsIgnoreCase(tag.nome)) {
-//                                testo = leggiTesto();
-//                                Script script = new Script();
-                                tag = leggiTag();
-                                if (tag!=null)
-                                    throw documentoInvalido("Atteso </script> ma era " + tag.nome);
+                                var da = cursore;
+                                String testoScript = leggiScript();
+
+                                Script script = new Script(da, cursore, testoScript);
+                                System.out.println(script);
+                                // Quasi finito qui, i tag letti sono quelli
+//                                tag = leggiTag();
+//                                if (tag != null)
+//                                    throw documentoInvalido("Atteso </script> ma era " + tag.nome);
+
+                                continue;
                             }
                         }
                         avanza();
                     }
-                }
-                else {
+                } else {
                     System.out.println(leggiTesto());
                 }
             }
         }
 
-        record Commento(Cursore da, Cursore a, String testo){};
+        record Commento(Cursore da, Cursore a, String testo) {
+        }
+
+        ;
 
         private Commento leggiCommento() throws IOException {
             var inizio = cursore;
@@ -108,21 +118,21 @@ public class ParserHtml {
             attendi('-');
 
             StringBuilder commento = new StringBuilder();
-            while(!commento.toString().endsWith("-->")) {
+            while (!commento.toString().endsWith("-->")) {
                 commento.append(avanza());
             }
-            return new Commento(inizio, cursore, commento.substring(0, commento.length()-3));
+            return new Commento(inizio, cursore, commento.substring(0, commento.length() - 3));
         }
 
         private void attendi(char c) throws IOException {
             avanza();
-            if (attuale!=c) {
+            if (attuale != c) {
                 throw documentoInvalido("Atteso '" + c + "' ma era '" + attuale + "'");
             }
         }
 
         private boolean èLaFine(char c) {
-            return c==(char)-1;
+            return c == (char) -1;
         }
 
         private Testo leggiTesto() throws IOException {
@@ -131,14 +141,20 @@ public class ParserHtml {
             do {
                 testo.append(attuale);
                 avanza();
-            }while(attuale!='<' && attuale!=(char)-1);
+            } while (attuale != '<' && attuale != (char) -1);
 
             return new Testo(inizio, cursorePrecedente, testo.toString());
         }
 
-        record Testo(Cursore da, Cursore a, String testo){};
+        record Testo(Cursore da, Cursore a, String testo) {
+        }
 
-        record InizioTag(Cursore da, Cursore a, String nome, List<Attributo> attributi, boolean giàChiuso){};
+        ;
+
+        record InizioTag(Cursore da, Cursore a, String nome, List<Attributo> attributi, boolean giàChiuso) {
+        }
+
+        ;
 
         private InizioTag leggiTag() throws IOException {
             var posizione = cursore.colonnaPrecedente();
@@ -156,20 +172,18 @@ public class ParserHtml {
             }
 
             var attributi = new ArrayList<Attributo>();
-            while(true) {
+            while (true) {
                 if (èUnoSpazio(attuale)) {
                     avanza();
                     continue;
-                }
-                else if (èUnaLettera(attuale)) {
+                } else if (èUnaLettera(attuale)) {
                     attributi.add(leggiAttributo());
                     continue;
                 }
                 else if (attuale=='/') {
                     attendi('>');
                     return new InizioTag(posizione, cursore, nomeTag, attributi, sì);
-                }
-                else if (attuale=='>') {
+                } else if (attuale == '>') {
                     return new InizioTag(posizione, cursore, nomeTag, attributi, no);
                 }
 
@@ -178,27 +192,28 @@ public class ParserHtml {
             }
         }
 
-        record Attributo(Cursore da, Cursore a, String nome, String valore){};
+        record Attributo(Cursore da, Cursore a, String nome, String valore) {
+        }
 
-        private Attributo leggiAttributo() throws IOException  {
+        ;
+
+        private Attributo leggiAttributo() throws IOException {
             var posizione = cursore;
             var nomeAttributo = leggiNomeAttributo();
             if (èUnoSpazio(attuale)) {
                 // Attributo letto, non ha un valore
                 return new Attributo(posizione, cursore, nomeAttributo, null);
-            }
-            else if (attuale!='=') {
+            } else if (attuale != '=') {
                 throw documentoInvalido("'=' atteso ma era '" + attuale + "'");
             }
 
             avanza();
-            if (attuale=='\'' || attuale=='"') {
+            if (attuale == '\'' || attuale == '"') {
                 var virgolette = attuale;
-                var valore = leggiStringa(() -> attuale==virgolette && precedente!='\\');
+                var valore = leggiStringa(() -> attuale == virgolette && precedente != '\\');
                 return new Attributo(posizione, cursore, nomeAttributo, valore);
-            }
-            else {
-                var valore = attuale + leggiStringa(() -> !èUnaLettera(attuale) && !èUnaCifra(attuale) && attuale!='_');
+            } else {
+                var valore = attuale + leggiStringa(() -> !èUnaLettera(attuale) && !èUnaCifra(attuale) && attuale != '_');
                 return new Attributo(posizione, cursore, nomeAttributo, valore);
             }
         }
@@ -228,12 +243,11 @@ public class ParserHtml {
         private String leggiNomeAttributo() throws IOException {
             var sb = new StringBuilder();
             sb.append(attuale);
-            while(true) {
+            while (true) {
                 var carattere = avanza();
-                if (èUnoSpazio(carattere) || carattere=='=') {
+                if (èUnoSpazio(carattere) || carattere == '=') {
                     break;
-                }
-                else if (!èUnaLettera(carattere) && !èUnaCifra(carattere) && carattere != '-' && carattere != '_') {
+                } else if (!èUnaLettera(carattere) && !èUnaCifra(carattere) && carattere != '-' && carattere != '_') {
                     throw documentoInvalido("'" + carattere + "' è usato in un nome attributo");
                 }
                 sb.append(carattere);
@@ -244,29 +258,26 @@ public class ParserHtml {
 
         private String leggiNomeTag() throws IOException {
             var sb = new StringBuilder();
-            while(true) {
+            while (true) {
                 avanza();
                 if (èUnoSpazio(attuale)) {
                     break;
-                }
-                else if (attuale=='/' && !sb.isEmpty()) {
+                } else if (attuale == '/' && !sb.isEmpty()) {
                     // lo slash prima della fine
                     break;
-                }
-                else if (attuale=='>') {
+                } else if (attuale == '>') {
                     break;
-                }
-                else if (èUnaLettera(attuale) || èUnaCifra(attuale) || attuale == '-' || attuale == '_'
-                        || (attuale=='/' && sb.isEmpty())) {
+                } else if (èUnaLettera(attuale) || èUnaCifra(attuale) || attuale == '-' || attuale == '_'
+                        || (attuale == '/' && sb.isEmpty())) {
                     sb.append(attuale);
-                }
-                else {
+                } else {
                     throw documentoInvalido("'" + attuale + "' è usato in un nome tag");
                 }
             }
 
             return sb.toString();
         }
+
         private boolean èUnoSpazio(char c) {
             return Character.isWhitespace(c);
         }
@@ -281,15 +292,14 @@ public class ParserHtml {
 
 
         private char avanza() throws IOException {
-            if (attuale==(char)-1)
+            if (attuale == (char) -1)
                 throw new IOException("Tentativo di avanzare dopo la fine");
 
             precedente = attuale;
             cursorePrecedente = cursore;
             if (oracolo) {
                 oracolo = false;
-            }
-            else {
+            } else {
                 attuale = (char) reader.read();
             }
             cursore = cursore.avanza(attuale);
