@@ -41,6 +41,8 @@ public class CommentProcessor {
             return null;
           //  throw new IllegalArgumentException("No parser available for file: " + file.getAbsolutePath());
         }
+
+
         try (var reader = new FileReader(file)) {
             return new Comments(file.getName(), parser.parse(reader));
         }

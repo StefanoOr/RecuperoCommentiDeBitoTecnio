@@ -12,6 +12,8 @@ public class HtmlCommentParser extends AbstractCommentParser {
 
     @Override
     public List<Comment> parse(Reader reader) throws IOException {
+
+
         //List<Boolean> multiRiga = new ArrayList<>();
         String contenuto = readAsString(reader);
 
@@ -23,6 +25,8 @@ public class HtmlCommentParser extends AbstractCommentParser {
         boolean contenutoRiga = false;
         boolean inStringa = false;
         boolean inScript = false;
+
+        boolean test = false;
 
         char caratterePrecedente = 0;
         char caratterePrePrecedente = 0;
@@ -160,12 +164,18 @@ public class HtmlCommentParser extends AbstractCommentParser {
             } else if (carattereAttuale == '"') {
                 inStringa = true;
                 //controllo se la riga contiene l'inizio del corpo dello script
-            } else if (rigaInizioScript.contains(numeroRiga) && (rigaFineScript.contains(numeroRiga)) ) {
-              if(carattereAttuale=='>' && caratterePrecedente=='t' && caratterePrePrecedente=='p' && caratterePrePrePrePrecendente=='i'){
-                  inScript=false;
+            } else if (rigaInizioScript.contains(numeroRiga) && (rigaFineScript.contains(numeroRiga))) {
+
+                if (carattereAttuale == '>' && caratterePrecedente == 't' && caratterePrePrecedente == 'p' && caratterePrePrePrePrecendente == 'i') {
+                    inScript = false;
+                    test=true;
 
 
-              }
+                } else if (carattereAttuale== '"' ) {
+                    inScript=true;
+
+                }
+
 
             } else if (rigaInizioScript.contains(numeroRiga)) {
                 inScript = true;

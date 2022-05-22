@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="HtmlCommentParser  impletementato Javascript per &lt;script&gt;">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/RemoveComments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/HtmlCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/HtmlCommentParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,24 +39,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "All Places",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_directory_selection": "C:/Users/ste_1/IdeaProjects/RecoverCommenti/src/main/java/org/exampleApprendimento",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.bastord.comment" />
@@ -63,17 +69,20 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ste_1\IdeaProjects\RecoverCommenti\target\classes\org\bastord\comment" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.exampleApprendimento" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.bastord.comment" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Example">
-    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.Example" />
+  <component name="RunManager" selected="Application.org.exampleApprendimento.RemoveComments">
+    <configuration name="org.exampleApprendimento.ParserHtml" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.exampleApprendimento.ParserHtml" />
       <module name="RecoverCommenti" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="PATTERN" value="org.exampleApprendimento.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,65 +90,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClonaCartelleTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="org.exampleApprendimento.RemoveComments" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.exampleApprendimento.RemoveComments" />
       <module name="RecoverCommenti" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="PATTERN" value="org.exampleApprendimento.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.bastord.comment" />
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.ClonaCartelleTest" />
-      <option name="METHOD_NAME" value="test2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserHtmlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RecoverCommenti" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.exampleApprendimento.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.exampleApprendimento" />
+      <option name="MAIN_CLASS_NAME" value="org.exampleApprendimento.ParserHtmlTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserHtmlTest.prova" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RecoverCommenti" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.exampleApprendimento.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.exampleApprendimento" />
+      <option name="MAIN_CLASS_NAME" value="org.exampleApprendimento.ParserHtmlTest" />
+      <option name="METHOD_NAME" value="prova" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClonaCartelleTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParserHtmlTest.provaTokenizer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RecoverCommenti" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="PATTERN" value="org.exampleApprendimento.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.bastord.comment" />
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.ClonaCartelleTest" />
-      <option name="METHOD_NAME" value="test4" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClonaCartelleTest.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RecoverCommenti" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.bastord.comment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.bastord.comment" />
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.ClonaCartelleTest" />
-      <option name="METHOD_NAME" value="test5" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClonaCartelleTest.test6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RecoverCommenti" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.bastord.comment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.bastord.comment" />
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.ClonaCartelleTest" />
-      <option name="METHOD_NAME" value="test6" />
+      <option name="PACKAGE_NAME" value="org.exampleApprendimento" />
+      <option name="MAIN_CLASS_NAME" value="org.exampleApprendimento.ParserHtmlTest" />
+      <option name="METHOD_NAME" value="provaTokenizer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Example" />
-        <item itemvalue="JUnit.ClonaCartelleTest.test6" />
-        <item itemvalue="JUnit.ClonaCartelleTest.test5" />
-        <item itemvalue="JUnit.ClonaCartelleTest.test4" />
-        <item itemvalue="JUnit.ClonaCartelleTest.test2" />
+        <item itemvalue="JUnit.ParserHtmlTest" />
+        <item itemvalue="JUnit.ParserHtmlTest.prova" />
+        <item itemvalue="JUnit.ParserHtmlTest.provaTokenizer" />
+        <item itemvalue="Application.org.exampleApprendimento.ParserHtml" />
+        <item itemvalue="Application.org.exampleApprendimento.RemoveComments" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +185,9 @@
       <workItem from="1652431805498" duration="595000" />
       <workItem from="1652632848575" duration="8764000" />
       <workItem from="1652727016274" duration="3914000" />
-      <workItem from="1652779710359" duration="15590000" />
+      <workItem from="1652779710359" duration="18235000" />
+      <workItem from="1653218316569" duration="3703000" />
+      <workItem from="1653227698687" duration="6279000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -280,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652790706447</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="HtmlCommentParser  impletementato Javascript per &lt;script&gt;">
+      <created>1652798668251</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652798668251</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,8 +348,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/HtmlCommentParser.java</url>
-          <line>163</line>
+          <line>168</line>
           <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/RemoveComments.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -344,11 +363,6 @@
         <PinnedItemInfo parentTag="com.opencsv.CSVReader" memberName="br" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="caratterePrecedente" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RecoverCommenti$Example.ic" NAME="Example Coverage Results" MODIFIED="1651935702670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
