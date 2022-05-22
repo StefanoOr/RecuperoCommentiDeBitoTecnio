@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="HtmlCommentParser  impletementato Javascript per &lt;script&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" afterDir="false" />
     </list>
-    <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="" />
+    <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/exampleApprendimento/ParserHtmlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/exampleApprendimento/ParserHtmlTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +29,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java">
+      <ranges>
+        <range start1="71" end1="71" start2="71" end2="72" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="72" end1="72" start2="73" end2="74" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
+        <range start1="82" end1="84" start2="84" end2="90" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
+        <range start1="87" end1="87" start2="93" end2="96" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
+        <range start1="97" end1="97" start2="106" end2="117" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
+        <range start1="103" end1="106" start2="123" end2="126" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
+        <range start1="114" end1="115" start2="134" end2="135" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
+        <range start1="166" end1="167" start2="186" end2="187" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -151,10 +169,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ParserHtmlTest.testa" />
-        <item itemvalue="JUnit.ParserHtmlTest" />
-        <item itemvalue="Application.org.exampleApprendimento.RemoveComments" />
         <item itemvalue="JUnit.ParserHtmlTest.prova" />
+        <item itemvalue="JUnit.ParserHtmlTest" />
+        <item itemvalue="JUnit.ParserHtmlTest.testa" />
+        <item itemvalue="Application.org.exampleApprendimento.RemoveComments" />
         <item itemvalue="JUnit.ParserHtmlTest.provaTokenizer" />
       </list>
     </recent_temporary>
@@ -186,7 +204,7 @@
       <workItem from="1652727016274" duration="3914000" />
       <workItem from="1652779710359" duration="18235000" />
       <workItem from="1653218316569" duration="3703000" />
-      <workItem from="1653227698687" duration="15485000" />
+      <workItem from="1653227698687" duration="17373000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -300,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653234032729</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="HtmlCommentParser  impletementato Javascript per &lt;script&gt;">
+      <created>1653244172472</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1653244172472</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,18 +389,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>198</line>
+          <line>218</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>199</line>
+          <line>219</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="78" />
+          <line>85</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="85" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

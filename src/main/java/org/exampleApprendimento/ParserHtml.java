@@ -69,7 +69,9 @@ public class ParserHtml {
                 if (èLaFine(attuale)) {
                     break;
                 }
+                //controllo  di inizio tag
                 else if (attuale == '<') {
+
                     if (prossimo()=='!') {
                         Commento commento = leggiCommento();
                         System.out.println(commento);
