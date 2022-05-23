@@ -1,5 +1,9 @@
 package org.exampleApprendimento;
 
+import org.bastord.comment.CLikeCommentParser;
+import org.bastord.comment.Comment;
+import org.bastord.comment.HtmlCommentParser;
+
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
@@ -87,10 +91,23 @@ public class ParserHtml {
                                 var da = cursore;
                                 String testoScript = leggiScript();
 
+                                Reader reader = new StringReader(testoScript);
+                                CLikeCommentParser a =new CLikeCommentParser();
+
+                             List<Comment> listaCommenti = a.parse(reader);
+
+                             for (Comment commento : listaCommenti){
+                                 System.out.println("\n\ncommenti clike\n\n "+commento.comment());
+                             }
+
+
                                 Script script = new Script(da, cursore, testoScript);
+
+
+
                                 System.out.println(script);
                                 // Quasi finito qui, i tag letti sono quelli
-//                                tag = leggiTag();
+                                // tag = leggiTag();
 //                                if (tag != null)
 //                                    throw documentoInvalido("Atteso </script> ma era " + tag.nome);
 

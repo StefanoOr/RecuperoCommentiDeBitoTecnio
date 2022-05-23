@@ -40,6 +40,12 @@ class ParserHtmlTest {
                                 
                 <script>
                   prova <!-- con un commento -->
+                  questo //commento 
+                  
+                  yoyo */ a a */
+                  
+                  /* prova commento multi linea 
+                  aaahahaha*/
                 </script>
                 """;
         System.out.println(input);
@@ -49,7 +55,7 @@ class ParserHtmlTest {
     @Test
     void provaTokenizer() {
         ParserHtml.Tokenizer tokenizer = new ParserHtml.Tokenizer("<html     attributo='valore' attributo2\n" +
-                "attributo3=\"123\" attributi4=124>");
+                "attributo3=\"123\" attributi4=124> ");
         assertThatCode(() -> tokenizer.next()).doesNotThrowAnyException();
     }
 }

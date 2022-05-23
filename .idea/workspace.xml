@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="HtmlCommentParser  impletementato Javascript per &lt;script&gt;">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="HtmlCommentParser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" afterDir="false" />
-    </list>
-    <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/exampleApprendimento/ParserHtmlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/exampleApprendimento/ParserHtmlTest.java" afterDir="false" />
     </list>
+    <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,55 +28,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java">
-      <ranges>
-        <range start1="28" end1="29" start2="28" end2="29" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="35" end1="36" start2="35" end2="36" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="45" end1="46" start2="45" end2="48" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="50" end1="51" start2="52" end2="53" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="58" end1="59" start2="60" end2="61" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="60" end1="60" start2="62" end2="63" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="66" end1="67" start2="69" end2="70" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="74" end1="75" start2="77" end2="78" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="77" end1="79" start2="80" end2="81" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="84" end1="89" start2="86" end2="97" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="93" end1="95" start2="101" end2="102" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="99" end1="99" start2="106" end2="121" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
-        <range start1="100" end1="101" start2="122" end2="126" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="105" end1="108" start2="130" end2="133" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
-        <range start1="110" end1="111" start2="135" end2="136" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="113" end1="114" start2="138" end2="139" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="116" end1="117" start2="141" end2="142" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
-        <range start1="118" end1="119" start2="143" end2="144" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="124" end1="125" start2="149" end2="150" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="133" end1="134" start2="158" end2="159" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="138" end1="139" start2="163" end2="167" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="140" end1="141" start2="168" end2="172" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="158" end1="159" start2="189" end2="190" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="162" end1="164" start2="193" end2="194" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="166" end1="169" start2="196" end2="198" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
-        <range start1="170" end1="172" start2="199" end2="200" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="180" end1="181" start2="208" end2="212" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="182" end1="183" start2="213" end2="214" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="188" end1="190" start2="219" end2="220" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="194" end1="195" start2="224" end2="225" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="196" end1="197" start2="226" end2="227" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="198" end1="201" start2="228" end2="230" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="230" end1="231" start2="259" end2="260" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="232" end1="233" start2="261" end2="262" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="234" end1="236" start2="263" end2="264" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="246" end1="247" start2="274" end2="275" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="250" end1="252" start2="278" end2="279" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="254" end1="256" start2="281" end2="282" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="257" end1="260" start2="283" end2="285" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="261" end1="263" start2="286" end2="287" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="269" end1="269" start2="293" end2="294" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="283" end1="284" start2="308" end2="309" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="290" end1="292" start2="315" end2="316" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -88,26 +37,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_directory_selection": "C:/Users/ste_1/IdeaProjects/RecoverCommenti/src/main/java/org/exampleApprendimento",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/ste_1/IdeaProjects/RecoverCommenti/src/main/java/org/exampleApprendimento&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.bastord.comment" />
@@ -239,7 +188,8 @@
       <workItem from="1652727016274" duration="3914000" />
       <workItem from="1652779710359" duration="18235000" />
       <workItem from="1653218316569" duration="3703000" />
-      <workItem from="1653227698687" duration="17960000" />
+      <workItem from="1653227698687" duration="20808000" />
+      <workItem from="1653313609206" duration="656000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -367,7 +317,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653248879013</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="HtmlCommentParser">
+      <created>1653249499428</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1653249499428</updated>
+    </task>
+    <task id="LOCAL-00020" summary="test">
+      <created>1653249525645</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1653249525645</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,9 +357,10 @@
     <MESSAGE value="Aggiunto creazione delle  sotto directorty" />
     <MESSAGE value="Risolto bug creazione file csv" />
     <MESSAGE value=" Update PythonCommentParser.java" />
-    <MESSAGE value="HtmlCommentParser" />
     <MESSAGE value="HtmlCommentParser  impletementato Javascript per &lt;script&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="HtmlCommentParser  impletementato Javascript per &lt;script&gt;" />
+    <MESSAGE value="HtmlCommentParser" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -431,23 +396,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>229</line>
+          <line>249</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>230</line>
+          <line>250</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="88" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="90" />
+          <line>99</line>
+          <option name="timeStamp" value="93" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -458,6 +423,9 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RecoverCommenti$ParserHtmlTest_prova.ic" NAME="ParserHtmlTest.prova Coverage Results" MODIFIED="1653258407816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.exampleApprendimento.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/RecoverCommenti$Example.ic" NAME="Example Coverage Results" MODIFIED="1651935702670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.bastord.comment.*</FILTER>
     </SUITE>
