@@ -97,7 +97,7 @@ public class ParserHtml {
                              List<Comment> listaCommenti = a.parse(reader);
 
                              for (Comment commento : listaCommenti){
-                                 System.out.println("\n\ncommenti clike\n\n "+commento.comment());
+                                 System.out.println("\n\ncommenti clike\n\n "+commento.comment()+ " "+ commento.line()+ " "+ commento.column());
                              }
 
 

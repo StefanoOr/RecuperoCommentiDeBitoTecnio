@@ -24,6 +24,8 @@ public class CommentProcessor {
 
         map.put("html", new HtmlCommentParser());
 
+        map.put("sol", new SolidityCommentParser());
+
 
         parsers = map;
     }

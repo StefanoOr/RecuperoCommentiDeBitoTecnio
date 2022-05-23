@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="HtmlCommentParser">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="Estrazione commenti nel tag script">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/SolidityCommentParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/exampleApprendimento/ParserHtmlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/exampleApprendimento/ParserHtmlTest.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +190,7 @@
       <workItem from="1652779710359" duration="18235000" />
       <workItem from="1653218316569" duration="3703000" />
       <workItem from="1653227698687" duration="20808000" />
-      <workItem from="1653313609206" duration="656000" />
+      <workItem from="1653313609206" duration="3545000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -331,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653249525645</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Estrazione commenti nel tag script">
+      <created>1653314317155</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1653314317155</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +368,8 @@
     <MESSAGE value="HtmlCommentParser  impletementato Javascript per &lt;script&gt;" />
     <MESSAGE value="HtmlCommentParser" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Estrazione commenti nel tag script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Estrazione commenti nel tag script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
