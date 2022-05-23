@@ -13,7 +13,7 @@ public class Example {
         String fileName,directoryCsv;
 
         //path del file
-        fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\provaSito.html";
+        fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\example7.sol";
 
         //path della cartella
         String directory = "C:\\Users\\ste_1\\Desktop\\bitcoin-master";

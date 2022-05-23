@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SolidityCommentParser extends AbstractCommentParser{
+public class SolidityCommentParser extends AbstractCommentParser {
     @Override
     public List<Comment> parse(Reader reader) throws IOException {
         int numeroRiga = 1;
@@ -23,7 +23,7 @@ public class SolidityCommentParser extends AbstractCommentParser{
         boolean contenutoRiga = false;
         boolean inStringa = false;
         char caratterePrecedente = 0;
-        char caratterePrePrecedente=0;
+        char caratterePrePrecedente = 0;
         var commenti = new ArrayList<Comment>();
         var rimuoviAsterischi = false;
 
@@ -38,7 +38,7 @@ public class SolidityCommentParser extends AbstractCommentParser{
                 }
 
             } else if (contenutoRiga || contenutoMultiRiga) {
-                if (contenutoRiga && ((carattereAttuale == '\n' || ultimoCarattere) )) {
+                if (contenutoRiga && ((carattereAttuale == '\n' || ultimoCarattere))) {
                     contenutoRiga = false;
 
                     // COMMENTO RIGA NORMALE
@@ -51,8 +51,8 @@ public class SolidityCommentParser extends AbstractCommentParser{
                     contenutoMultiRiga = false;
 
 
-                    if (carattereAttuale=='/') {
-                        commentoAttuale.setLength(commentoAttuale.length()-1);
+                    if (carattereAttuale == '/') {
+                        commentoAttuale.setLength(commentoAttuale.length() - 1);
                     }
 
                     //COMMENTO MULTI RIGA
@@ -76,7 +76,7 @@ public class SolidityCommentParser extends AbstractCommentParser{
                     }
 
 
-                    commenti.add(new Comment(numeroRiga-numeroMultiRiga+1, colonnaCommento, numeroMultiRiga, commento));
+                    commenti.add(new Comment(numeroRiga - numeroMultiRiga + 1, colonnaCommento, numeroMultiRiga, commento));
                     numeroMultiRiga = 1;
                     rimuoviAsterischi = false; // disabilita il flag per i prossimi commenti
 
@@ -84,9 +84,11 @@ public class SolidityCommentParser extends AbstractCommentParser{
                 } else {
                     // se siamo in un commento multilinea ed il primo carattere è un asterisco, vuol dire
                     //che è cominciato con /** e lo consideration un commento javadoc
-                    if (commentoAttuale.isEmpty() && contenutoMultiRiga && carattereAttuale=='*') {
+                    if (commentoAttuale.isEmpty() && contenutoMultiRiga && carattereAttuale == '*') {
                         rimuoviAsterischi = true;
                     }
+                    //TODO aggiungere elimina ///
+                   //TODO if(commentoAttuale.isEmpty()  && carattereAttuale == '')
                     commentoAttuale.append(carattereAttuale);
                 }
 
@@ -103,7 +105,7 @@ public class SolidityCommentParser extends AbstractCommentParser{
                 inStringa = true;
             }
 
-            caratterePrePrecedente=caratterePrecedente;
+            caratterePrePrecedente = caratterePrecedente;
             caratterePrecedente = carattereAttuale;
             colonna++;
 
