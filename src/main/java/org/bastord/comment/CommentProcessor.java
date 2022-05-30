@@ -26,6 +26,8 @@ public class CommentProcessor {
 
         map.put("sol", new SolidityCommentParser());
 
+        map.put("rs", new RustCommentParser());
+
 
         parsers = map;
     }
