@@ -26,6 +26,7 @@ public class SolidityCommentParser extends AbstractCommentParser {
         char caratterePrePrecedente = 0;
         var commenti = new ArrayList<Comment>();
         var rimuoviAsterischi = false;
+        var rimuoviSlash = false;
 
         for (int i = 0; i < contenuto.length(); i++) {
             boolean ultimoCarattere = i == contenuto.length() - 1;
@@ -43,7 +44,35 @@ public class SolidityCommentParser extends AbstractCommentParser {
 
                     // COMMENTO RIGA NORMALE
                     // non deve essere processato ulteriormente
-                    commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commentoAttuale.toString()));
+
+                    String commento = commentoAttuale.toString().stripIndent();
+                    if(rimuoviSlash){
+
+                        if(commento.stripLeading().startsWith("/")){
+                            commento= commento.stripLeading().substring(1).stripLeading();
+                        }
+                        commento = commento
+                                .lines() // prendi le linee del commento
+                                .map(riga -> {
+                                    // se la riga inizia con '/', rimuovilo, e rimuovi eventuail spazi
+                                    if (riga.stripLeading().startsWith("/")) {
+                                        return riga.stripLeading().substring(1).stripLeading();
+                                    }
+
+                                 /*   if(riga.stripLeading().startsWith("!")){
+                                        return riga.stripLeading().substring(1).stripLeading();
+                                    }*/
+
+                                    // la riga non inizia con '/', non modificarla
+                                    return riga;
+                                })
+                                // raggruppa le righe in una stringa
+                                .collect(Collectors.joining("\n"));
+
+                    }
+                    commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commento));
+
+
                     //numeroMultiRiga = 0;
 
                     commentoAttuale.setLength(0);
@@ -86,7 +115,9 @@ public class SolidityCommentParser extends AbstractCommentParser {
                     //che è cominciato con /** e lo consideration un commento javadoc
                     if (commentoAttuale.isEmpty() && contenutoMultiRiga && carattereAttuale == '*') {
                         rimuoviAsterischi = true;
-                    }
+                    }else if(commentoAttuale.isEmpty() && contenutoRiga && carattereAttuale=='/'){
+                    rimuoviSlash = true;
+                }
                     //TODO aggiungere elimina ///
                    //TODO if(commentoAttuale.isEmpty()  && carattereAttuale == '')
                     commentoAttuale.append(carattereAttuale);
