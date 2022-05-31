@@ -54,16 +54,10 @@ public class SolidityCommentParser extends AbstractCommentParser {
                         commento = commento
                                 .lines() // prendi le linee del commento
                                 .map(riga -> {
-                                    // se la riga inizia con '/', rimuovilo, e rimuovi eventuail spazi
+                                    // se la riga inizia con '///', rimuovilo, e rimuovi eventuail spazi
                                     if (riga.stripLeading().startsWith("/")) {
                                         return riga.stripLeading().substring(1).stripLeading();
                                     }
-
-                                 /*   if(riga.stripLeading().startsWith("!")){
-                                        return riga.stripLeading().substring(1).stripLeading();
-                                    }*/
-
-                                    // la riga non inizia con '/', non modificarla
                                     return riga;
                                 })
                                 // raggruppa le righe in una stringa

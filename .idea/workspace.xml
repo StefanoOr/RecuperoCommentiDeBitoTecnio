@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="init RustCommentParser">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="Solidity finish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/SolidityCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/SolidityCommentParser.java" afterDir="false" />
@@ -189,7 +190,7 @@
       <workItem from="1653227698687" duration="20808000" />
       <workItem from="1653313609206" duration="6645000" />
       <workItem from="1653944247222" duration="1723000" />
-      <workItem from="1654015631449" duration="2455000" />
+      <workItem from="1654015631449" duration="5263000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -359,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653944823893</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Solidity finish">
+      <created>1654026270362</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1654026270362</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +399,8 @@
     <MESSAGE value="Estrazione commenti nel tag script" />
     <MESSAGE value="init SolidityCommentParser" />
     <MESSAGE value="init RustCommentParser" />
-    <option name="LAST_COMMIT_MESSAGE" value="init RustCommentParser" />
+    <MESSAGE value="Solidity finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solidity finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -453,12 +462,12 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java</url>
           <line>118</line>
-          <option name="timeStamp" value="100" />
+          <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="101" />
+          <line>61</line>
+          <option name="timeStamp" value="103" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

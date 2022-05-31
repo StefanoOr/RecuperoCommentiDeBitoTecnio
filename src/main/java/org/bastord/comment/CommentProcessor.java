@@ -21,8 +21,9 @@ public class CommentProcessor {
         map.put("js", cLikeParser);
         map.put("c", cLikeParser);
         map.put("cpp", cLikeParser);
+        map.put("ts", cLikeParser);
 
-        map.put("html", new HtmlCommentParser());
+       // map.put("html", new HtmlCommentParser());
 
         map.put("sol", new SolidityCommentParser());
 

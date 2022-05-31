@@ -27,6 +27,7 @@ public class RustCommentParser extends AbstractCommentParser {
         var commenti = new ArrayList<Comment>();
         var rimuoviAsterischi = false;
         var rimuoviSlash = false;
+        var rimuoviEsclamativi=false;
 
         for (int i = 0; i < contenuto.length(); i++) {
             boolean ultimoCarattere = i == contenuto.length() - 1;
@@ -57,20 +58,34 @@ public class RustCommentParser extends AbstractCommentParser {
                                 .map(riga -> {
                                     // se la riga inizia con '/', rimuovilo, e rimuovi eventuail spazi
                                     if (riga.stripLeading().startsWith("/")) {
+
                                         return riga.stripLeading().substring(1).stripLeading();
                                     }
 
-                                 /*   if(riga.stripLeading().startsWith("!")){
-                                        return riga.stripLeading().substring(1).stripLeading();
-                                    }*/
 
-                                    // la riga non inizia con '/', non modificarla
                                     return riga;
                                 })
                                 // raggruppa le righe in una stringa
                                 .collect(Collectors.joining("\n"));
 
                     }
+                     if(rimuoviEsclamativi){
+                         commento = commento
+                                 .lines() // prendi le linee del commento
+                                 .map(riga -> {
+                                     // se la riga inizia con '*', rimuovilo, e rimuovi eventuail spazi
+                                     if (riga.stripLeading().startsWith("!")) {
+                                         return riga.stripLeading().substring(1).stripLeading();
+                                     }
+
+                                     // la riga non inizia con '*', non modificarla
+                                     return riga;
+                                 })
+                                 // raggruppa le righe in una stringa
+                                 .collect(Collectors.joining("\n"));
+                     }
+
+                     rimuoviEsclamativi=false;
                     rimuoviSlash = false;
                     commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commento));
 
@@ -87,12 +102,12 @@ public class RustCommentParser extends AbstractCommentParser {
                     String commento = commentoAttuale.toString().stripIndent();
 
                     //rimuovi asterischi dai commenti rustDoc
-                    if (rimuoviAsterischi) {
+                    if (rimuoviAsterischi || rimuoviEsclamativi) {
                         commento = commento
                                 .lines() // prendi le linee del commento
                                 .map(riga -> {
                                     // se la riga inizia con '*', rimuovilo, e rimuovi eventuail spazi
-                                    if (riga.stripLeading().startsWith("*")) {
+                                    if (riga.stripLeading().startsWith("*") || riga.stripLeading().startsWith("!")) {
                                         return riga.stripLeading().substring(1).stripLeading();
                                     }
 
@@ -113,10 +128,13 @@ public class RustCommentParser extends AbstractCommentParser {
                 } else {
                     // se siamo in un commento multilinea ed il primo carattere è un asterisco, vuol dire
                     //che è cominciato con /** e lo consideration un commento javadoc
-                    if (commentoAttuale.isEmpty() && contenutoMultiRiga && carattereAttuale=='*') {
-                        rimuoviAsterischi = true;
+                    if (commentoAttuale.isEmpty() && contenutoMultiRiga && (carattereAttuale=='*' || carattereAttuale=='!')){
+                        if(carattereAttuale=='!') rimuoviEsclamativi=true;
+                        else rimuoviAsterischi = true;
                     }else if(commentoAttuale.isEmpty() && contenutoRiga && carattereAttuale=='/'){
                         rimuoviSlash = true;
+                    }else if(commentoAttuale.isEmpty() && contenutoRiga && carattereAttuale=='!'){
+                        rimuoviEsclamativi = true;
                     }
                     commentoAttuale.append(carattereAttuale);
                 }
