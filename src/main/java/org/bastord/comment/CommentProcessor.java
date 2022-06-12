@@ -29,6 +29,8 @@ public class CommentProcessor {
 
         map.put("rs", new RustCommentParser());
 
+        map.put("hs",new HaskellCommentParser());
+
 
         parsers = map;
     }

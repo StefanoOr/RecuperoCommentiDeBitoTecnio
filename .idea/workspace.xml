@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="Solidity finish">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="rust finish">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/HaskellCommentParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/SolidityCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/SolidityCommentParser.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +50,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/ste_1/IdeaProjects/RecoverCommenti/src/main/java/org/exampleApprendimento&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ste_1/IdeaProjects/RecoverCommenti&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -153,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Example" />
+        <item itemvalue="Application.org.exampleApprendimento.RemoveComments" />
         <item itemvalue="JUnit.ParserHtmlTest.prova" />
         <item itemvalue="JUnit.ParserHtmlTest" />
         <item itemvalue="JUnit.ParserHtmlTest.testa" />
-        <item itemvalue="Application.org.exampleApprendimento.RemoveComments" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +191,13 @@
       <workItem from="1653227698687" duration="20808000" />
       <workItem from="1653313609206" duration="6645000" />
       <workItem from="1653944247222" duration="1723000" />
-      <workItem from="1654015631449" duration="5263000" />
+      <workItem from="1654015631449" duration="6531000" />
+      <workItem from="1654070556509" duration="9000" />
+      <workItem from="1654070616387" duration="269000" />
+      <workItem from="1654070911246" duration="688000" />
+      <workItem from="1654071644114" duration="140000" />
+      <workItem from="1654071795082" duration="2679000" />
+      <workItem from="1655059054117" duration="12608000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -367,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654026270362</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="rust finish">
+      <created>1654029066024</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1654029066024</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +414,8 @@
     <MESSAGE value="init SolidityCommentParser" />
     <MESSAGE value="init RustCommentParser" />
     <MESSAGE value="Solidity finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solidity finish" />
+    <MESSAGE value="rust finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="rust finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -416,7 +431,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>115</line>
+          <line>114</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -468,6 +483,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java</url>
           <line>61</line>
           <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/HaskellCommentParser.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

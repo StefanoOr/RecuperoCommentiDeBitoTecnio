@@ -1,5 +1,4 @@
 package org.bastord.comment;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -13,7 +12,7 @@ public class Example {
         String fileName,directoryCsv;
 
         //path del file
-        fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\rust.rs";
+        fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\Version.hs";
 
         //path della cartella
         String directory = "C:\\Users\\ste_1\\Desktop\\solidity-develop";

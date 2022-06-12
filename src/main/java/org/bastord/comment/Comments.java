@@ -1,5 +1,5 @@
-package org.bastord.comment;
 
+package org.bastord.comment;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvException;
