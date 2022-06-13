@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="rust finish">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/HaskellCommentParser.java" afterDir="false" />
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="HaskellCommentParser completato">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +195,7 @@
       <workItem from="1654070911246" duration="688000" />
       <workItem from="1654071644114" duration="140000" />
       <workItem from="1654071795082" duration="2679000" />
-      <workItem from="1655059054117" duration="12608000" />
+      <workItem from="1655059054117" duration="18376000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -381,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654029066024</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="HaskellCommentParser completato">
+      <created>1655073546066</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1655073546066</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +420,8 @@
     <MESSAGE value="init RustCommentParser" />
     <MESSAGE value="Solidity finish" />
     <MESSAGE value="rust finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="rust finish" />
+    <MESSAGE value="HaskellCommentParser completato" />
+    <option name="LAST_COMMIT_MESSAGE" value="HaskellCommentParser completato" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -475,19 +481,14 @@
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/HaskellCommentParser.java</url>
           <line>105</line>
           <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="117" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

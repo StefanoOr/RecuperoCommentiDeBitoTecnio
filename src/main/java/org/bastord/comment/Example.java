@@ -12,7 +12,7 @@ public class Example {
         String fileName,directoryCsv;
 
         //path del file
-        fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\Version.hs";
+        fileName = "C:\\Users\\ste_1\\Desktop\\CartellaFileTestTirocinio\\rust.rs";
 
         //path della cartella
         String directory = "C:\\Users\\ste_1\\Desktop\\solidity-develop";
@@ -49,7 +49,7 @@ public class Example {
 
 
 
-            //TODO Test da eliminare , pezzo di ccodice per la lettura di un file singolo
+
 
 
 
