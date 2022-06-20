@@ -22,6 +22,7 @@ public class CommentProcessor {
         map.put("c", cLikeParser);
         map.put("cpp", cLikeParser);
         map.put("ts", cLikeParser);
+        map.put("go", cLikeParser);
 
        // map.put("html", new HtmlCommentParser());
 

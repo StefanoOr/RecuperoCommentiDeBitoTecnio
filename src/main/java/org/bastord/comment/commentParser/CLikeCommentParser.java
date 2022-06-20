@@ -31,13 +31,18 @@ public class CLikeCommentParser extends AbstractCommentParser {
         var commenti = new ArrayList<Comment>();
         var rimuoviAsterischi = false;
 
+
         for (int i = 0; i < contenuto.length(); i++) {
             boolean ultimoCarattere = i == contenuto.length() - 1;
             char carattereAttuale = contenuto.charAt(i);
 
+            if(i==230){
+                System.out.println("test");
+            }
+
             if (inStringa) {
 
-                if (carattereAttuale == '"' && caratterePrecedente != '\\') {
+                if ((carattereAttuale == '"' && caratterePrecedente != '\\') || (Character.toString(carattereAttuale).equals("'"))) {
                     inStringa = false;
                 }
 
@@ -100,15 +105,20 @@ public class CLikeCommentParser extends AbstractCommentParser {
                 contenutoRiga = true;
 
             } else if (carattereAttuale == '*' && caratterePrecedente == '/') {
+                if(numeroRiga==2742){
+                    System.out.println("a");
+                }
                 colonnaCommento = colonna;
 
                 contenutoMultiRiga = true;
-            } else if (carattereAttuale == '"') {
+            } else if (carattereAttuale == '"' || Character.toString(carattereAttuale).equals("'")) {
                 inStringa = true;
             }
 
             caratterePrecedente = carattereAttuale;
             colonna++;
+
+
 
             if (carattereAttuale == '\n') {
                 if (contenutoMultiRiga) {

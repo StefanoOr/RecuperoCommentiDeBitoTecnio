@@ -12,10 +12,10 @@ public class Example {
         String fileName,directoryCsv;
 
         //path del file
-        fileName = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\schema.cue";
+        fileName = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\nuovo 1.js";
 
         //path della cartella
-        String directory = "C:\\Users\\ste_1\\Desktop\\binance-java-api-master";
+        String directory = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\core-main";
 
         Scanner input = new Scanner(System.in);
         System.out.println("Inserisci \n 1 Directory\n 2 file" );

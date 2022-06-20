@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="RustCommentParser.java completato">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CueCommentParser.java" afterDir="false" />
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="CueCommentParser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/HaskellCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/HaskellCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/HtmlCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/HtmlCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/PythonCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/PythonCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/RustCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/RustCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/SolidityCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/SolidityCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +198,7 @@
       <workItem from="1654071795082" duration="2679000" />
       <workItem from="1655059054117" duration="18376000" />
       <workItem from="1655133604339" duration="121000" />
-      <workItem from="1655547764710" duration="5963000" />
+      <workItem from="1655547764710" duration="10836000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -403,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655717826742</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="CueCommentParser">
+      <created>1655720950389</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1655720950389</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +439,8 @@
     <MESSAGE value="rust finish" />
     <MESSAGE value="HaskellCommentParser completato" />
     <MESSAGE value="RustCommentParser.java completato" />
-    <option name="LAST_COMMIT_MESSAGE" value="RustCommentParser.java completato" />
+    <MESSAGE value="CueCommentParser" />
+    <option name="LAST_COMMIT_MESSAGE" value="CueCommentParser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -484,19 +485,9 @@
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
           <line>98</line>
           <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/RustCommentParser.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/HaskellCommentParser.java</url>
@@ -515,6 +506,11 @@
         <PinnedItemInfo parentTag="com.opencsv.CSVReader" memberName="br" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="contenutoMultiRiga" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RecoverCommenti$ParserHtmlTest_prova.ic" NAME="ParserHtmlTest.prova Coverage Results" MODIFIED="1653258407816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
