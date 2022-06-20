@@ -1,8 +1,7 @@
 package org.exampleApprendimento;
 
-import org.bastord.comment.CLikeCommentParser;
+import org.bastord.comment.commentParser.CLikeCommentParser;
 import org.bastord.comment.Comment;
-import org.bastord.comment.HtmlCommentParser;
 
 import java.io.IOException;
 import java.io.Reader;

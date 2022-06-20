@@ -1,12 +1,12 @@
 package org.bastord.comment;
 
-import javax.annotation.processing.Filer;
+import org.bastord.comment.commentParser.*;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class CommentProcessor {
@@ -24,6 +24,8 @@ public class CommentProcessor {
         map.put("ts", cLikeParser);
 
        // map.put("html", new HtmlCommentParser());
+
+        map.put("cue",new CueCommentParser());
 
         map.put("sol", new SolidityCommentParser());
 

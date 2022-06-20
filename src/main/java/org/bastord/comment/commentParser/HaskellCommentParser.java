@@ -1,4 +1,7 @@
-package org.bastord.comment;
+package org.bastord.comment.commentParser;
+
+import org.bastord.comment.AbstractCommentParser;
+import org.bastord.comment.Comment;
 
 import java.io.IOException;
 import java.io.Reader;
