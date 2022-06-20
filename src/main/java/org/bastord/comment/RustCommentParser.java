@@ -69,6 +69,10 @@ public class RustCommentParser extends AbstractCommentParser {
 
                     }
 
+                    for (int j =0 ; j<2 && commento.stripLeading().startsWith("!"); j++){
+                        commento= commento.substring(1);
+                    }
+
                     rimuoviSlash = false;
                     commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commento));
 
@@ -85,25 +89,11 @@ public class RustCommentParser extends AbstractCommentParser {
                     String commento = commentoAttuale.toString().stripIndent();
 
                     //rimuovi asterischi dai commenti rustDoc
-                    if (rimuoviAsterischi ) {
-                        commento = commento
-                                .lines() // prendi le linee del commento
-                                .map(riga -> {
-                                    // se la riga inizia con '*', rimuovilo, e rimuovi eventuail spazi
-
-
-                                    if (riga.stripLeading().startsWith("*")) {
-                                        return riga.stripLeading().substring(1).stripLeading();
-                                    }
-
-                                    // la riga non inizia con '*', non modificarla
-                                    return riga;
-                                })
-                                // raggruppa le righe in una stringa
-                                .collect(Collectors.joining("\n"));
+                    for(int z=0 ; z<2 && commento.stripLeading().startsWith("*");z++){
+                        commento= commento.substring(1);
                     }
 
-                    for (int j =0 ; j<1 && commento.stripLeading().startsWith("!"); j++){
+                    for (int j =0 ; j<2 && commento.stripLeading().startsWith("!"); j++){
                        commento= commento.substring(1);
                     }
 
@@ -126,10 +116,13 @@ public class RustCommentParser extends AbstractCommentParser {
                     commentoAttuale.append(carattereAttuale);
                 }
 
+
+
             } else if (carattereAttuale == '/' && caratterePrecedente == '/') {
                 colonnaCommento = colonna;
 
                 contenutoRiga = true;
+
 
             } else if (carattereAttuale == '*' && caratterePrecedente == '/') {
                 colonnaCommento = colonna;
