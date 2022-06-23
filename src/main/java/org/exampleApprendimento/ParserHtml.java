@@ -204,10 +204,10 @@ public class ParserHtml {
 
             var attributi = new ArrayList<Attributo>();
             while (true) {
-                if (èUnoSpazio(attuale)) {
+                if (isASpece(attuale)) {
                     avanza();
                     continue;
-                } else if (èUnaLettera(attuale)) {
+                } else if (isALetter(attuale)) {
                     attributi.add(leggiAttributo());
                     continue;
                 } else if (attuale == '/') {
@@ -230,7 +230,7 @@ public class ParserHtml {
         private Attributo leggiAttributo() throws IOException {
             var posizione = cursore;
             var nomeAttributo = leggiNomeAttributo();
-            if (èUnoSpazio(attuale)) {
+            if (isASpece(attuale)) {
                 // Attributo letto, non ha un valore
                 return new Attributo(posizione, cursore, nomeAttributo, null);
             } else if (attuale != '=') {
@@ -243,7 +243,7 @@ public class ParserHtml {
                 var valore = leggiStringa(() -> attuale == virgolette && precedente != '\\');
                 return new Attributo(posizione, cursore, nomeAttributo, valore);
             } else {
-                var valore = attuale + leggiStringa(() -> !èUnaLettera(attuale) && !èUnaCifra(attuale) && attuale != '_');
+                var valore = attuale + leggiStringa(() -> !isALetter(attuale) && !isANumber(attuale) && attuale != '_');
                 return new Attributo(posizione, cursore, nomeAttributo, valore);
             }
         }
@@ -265,7 +265,7 @@ public class ParserHtml {
         }
 
         private void leggiSpazi() throws IOException {
-            while (èUnoSpazio(attuale)) {
+            while (isASpece(attuale)) {
                 avanza();
             }
         }
@@ -275,9 +275,9 @@ public class ParserHtml {
             sb.append(attuale);
             while (true) {
                 var carattere = avanza();
-                if (èUnoSpazio(carattere) || carattere == '=') {
+                if (isASpece(carattere) || carattere == '=') {
                     break;
-                } else if (!èUnaLettera(carattere) && !èUnaCifra(carattere) && carattere != '-' && carattere != '_') {
+                } else if (!isALetter(carattere) && !isANumber(carattere) && carattere != '-' && carattere != '_') {
                     throw documentoInvalido("'" + carattere + "' è usato in un nome attributo");
                 }
                 sb.append(carattere);
@@ -290,14 +290,14 @@ public class ParserHtml {
             var sb = new StringBuilder();
             while (true) {
                 avanza();
-                if (èUnoSpazio(attuale)) {
+                if (isASpece(attuale)) {
                     break;
                 } else if (attuale == '/' && !sb.isEmpty()) {
                     // lo slash prima della fine
                     break;
                 } else if (attuale == '>') {
                     break;
-                } else if (èUnaLettera(attuale) || èUnaCifra(attuale) || attuale == '-' || attuale == '_'
+                } else if (isALetter(attuale) || isANumber(attuale) || attuale == '-' || attuale == '_'
                         || (attuale == '/' && sb.isEmpty())) {
                     sb.append(attuale);
                 } else {
@@ -308,15 +308,15 @@ public class ParserHtml {
             return sb.toString();
         }
 
-        private boolean èUnoSpazio(char c) {
+        private boolean isASpece(char c) {
             return Character.isWhitespace(c);
         }
 
-        private boolean èUnaLettera(char c) {
+        private boolean isALetter(char c) {
             return Character.isLetter(c);
         }
 
-        private boolean èUnaCifra(char c) {
+        private boolean isANumber(char c) {
             return Character.isDigit(c);
         }
 

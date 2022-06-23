@@ -15,7 +15,7 @@ public class Example {
         fileName = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\nuovo 1.js";
 
         //path della cartella
-        String directory = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\core-main";
+        String directory = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\binance-java-api-master";
 
         Scanner input = new Scanner(System.in);
         System.out.println("Inserisci \n 1 Directory\n 2 file" );

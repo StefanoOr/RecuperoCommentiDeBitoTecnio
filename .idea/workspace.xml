@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="CueCommentParser">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="CLikeCommentParser update gestione string">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/CommentProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +198,8 @@
       <workItem from="1654071795082" duration="2679000" />
       <workItem from="1655059054117" duration="18376000" />
       <workItem from="1655133604339" duration="121000" />
-      <workItem from="1655547764710" duration="10836000" />
+      <workItem from="1655547764710" duration="14100000" />
+      <workItem from="1656009825060" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -403,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655720950389</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="CLikeCommentParser update gestione string">
+      <created>1655726155100</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1655726155100</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +448,8 @@
     <MESSAGE value="HaskellCommentParser completato" />
     <MESSAGE value="RustCommentParser.java completato" />
     <MESSAGE value="CueCommentParser" />
-    <option name="LAST_COMMIT_MESSAGE" value="CueCommentParser" />
+    <MESSAGE value="CLikeCommentParser update gestione string" />
+    <option name="LAST_COMMIT_MESSAGE" value="CLikeCommentParser update gestione string" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -475,21 +484,6 @@
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>248</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>249</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/HaskellCommentParser.java</url>
           <line>105</line>
           <option name="timeStamp" value="115" />
@@ -498,6 +492,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/RustCommentParser.java</url>
           <line>88</line>
           <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="141" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

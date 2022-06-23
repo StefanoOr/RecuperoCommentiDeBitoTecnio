@@ -36,13 +36,10 @@ public class CLikeCommentParser extends AbstractCommentParser {
             boolean ultimoCarattere = i == contenuto.length() - 1;
             char carattereAttuale = contenuto.charAt(i);
 
-            if(i==230){
-                System.out.println("test");
-            }
 
             if (inStringa) {
 
-                if ((carattereAttuale == '"' && caratterePrecedente != '\\') || (Character.toString(carattereAttuale).equals("'"))) {
+                if ((carattereAttuale == '"' && caratterePrecedente != '\\') || (Character.toString(carattereAttuale).equals("'") && caratterePrecedente != '\\')) {
                     inStringa = false;
                 }
 
