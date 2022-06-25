@@ -56,10 +56,11 @@ public record Comments(String filename, List<Comment> comments) {
                 );
             }
             return comments;
-        } finally {
-
+        } catch (Exception e){
+            System.out.println("Errore dovuto a csv ");
         }
 
+        return comments;
     }
 
 

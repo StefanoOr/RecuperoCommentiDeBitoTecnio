@@ -72,14 +72,14 @@ public class ParserHtml {
             avanza();
             while (true) {
 
-                if (èLaFine(attuale)) {
+                if (isFinish(attuale)) {
                     break;
                 }
                 //controllo  di inizio tag
                 else if (attuale == '<') {
 
                     if (prossimo() == '!') {
-                        Commento commento = leggiCommento();
+                        Commento commento = readComment();
                         System.out.println(commento);
                     } else {
                         InizioTag tag = leggiTag();
@@ -116,7 +116,7 @@ public class ParserHtml {
                         avanza();
                     }
                 } else {
-                    System.out.println(leggiTesto());
+                    System.out.println(readText());
                 }
             }
         }
@@ -141,7 +141,8 @@ public class ParserHtml {
 
         ;
 
-        private Commento leggiCommento() throws IOException {
+        private Commento readComment
+                () throws IOException {
             var inizio = cursore;
 
             aspettati('!');
@@ -162,11 +163,11 @@ public class ParserHtml {
             }
         }
 
-        private boolean èLaFine(char c) {
+        private boolean isFinish(char c) {
             return c == (char) -1;
         }
 
-        private Testo leggiTesto() throws IOException {
+        private Testo readText() throws IOException {
             var inizio = cursore;
             var testo = new StringBuilder();
             do {
@@ -204,7 +205,7 @@ public class ParserHtml {
 
             var attributi = new ArrayList<Attributo>();
             while (true) {
-                if (isASpece(attuale)) {
+                if (isASpace(attuale)) {
                     avanza();
                     continue;
                 } else if (isALetter(attuale)) {
@@ -230,7 +231,7 @@ public class ParserHtml {
         private Attributo leggiAttributo() throws IOException {
             var posizione = cursore;
             var nomeAttributo = leggiNomeAttributo();
-            if (isASpece(attuale)) {
+            if (isASpace(attuale)) {
                 // Attributo letto, non ha un valore
                 return new Attributo(posizione, cursore, nomeAttributo, null);
             } else if (attuale != '=') {
@@ -265,7 +266,7 @@ public class ParserHtml {
         }
 
         private void leggiSpazi() throws IOException {
-            while (isASpece(attuale)) {
+            while (isASpace(attuale)) {
                 avanza();
             }
         }
@@ -275,7 +276,7 @@ public class ParserHtml {
             sb.append(attuale);
             while (true) {
                 var carattere = avanza();
-                if (isASpece(carattere) || carattere == '=') {
+                if (isASpace(carattere) || carattere == '=') {
                     break;
                 } else if (!isALetter(carattere) && !isANumber(carattere) && carattere != '-' && carattere != '_') {
                     throw documentoInvalido("'" + carattere + "' è usato in un nome attributo");
@@ -290,7 +291,7 @@ public class ParserHtml {
             var sb = new StringBuilder();
             while (true) {
                 avanza();
-                if (isASpece(attuale)) {
+                if (isASpace(attuale)) {
                     break;
                 } else if (attuale == '/' && !sb.isEmpty()) {
                     // lo slash prima della fine
@@ -308,7 +309,7 @@ public class ParserHtml {
             return sb.toString();
         }
 
-        private boolean isASpece(char c) {
+        private boolean isASpace(char c) {
             return Character.isWhitespace(c);
         }
 

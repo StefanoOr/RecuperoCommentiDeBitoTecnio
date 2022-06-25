@@ -15,7 +15,7 @@ public class Example {
         fileName = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\nuovo 1.js";
 
         //path della cartella
-        String directory = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\binance-java-api-master";
+        String directory = "C:\\Users\\ste_1\\Desktop\\Tirocinio";
 
         Scanner input = new Scanner(System.in);
         System.out.println("Inserisci \n 1 Directory\n 2 file" );
@@ -102,7 +102,7 @@ public class Example {
                 Comments commenti = CommentProcessor.process(file);
                 // Stampa i commenti (per debug)
                 if(commenti!=null) {
-                    System.out.println("\nLeggiamo di commenti di: " + commenti.filename());
+                    System.out.println("\nLeggiamo di commenti di: " + commenti.filename() +" percorso : "+ a[i].getPath());
                   //  commenti.print();
 
 

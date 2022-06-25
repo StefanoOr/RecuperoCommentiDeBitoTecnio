@@ -16,7 +16,7 @@ class ParserHtmlTest {
     void testa() {
         Document doc = Jsoup.parse("""
                 <script>
-                <!--
+                <!-- a -->
                 var y = "</script>";
                 var x = "<!-- ";
                 hello world
@@ -42,7 +42,7 @@ class ParserHtmlTest {
                   prova <!-- con un commento -->
                   questo //commento 
                   
-                  yoyo */ a a */
+                  yoyo /* a a */
                   
                   /* prova commento multi linea 
                   aaahahaha*/

@@ -27,6 +27,8 @@ public class CLikeCommentParser extends AbstractCommentParser {
         boolean contenutoMultiRiga = false;
         boolean contenutoRiga = false;
         boolean inStringa = false;
+        boolean inStringQuote=false;
+        boolean isEscapeSequence=false;
         char caratterePrecedente = 0;
         var commenti = new ArrayList<Comment>();
         var rimuoviAsterischi = false;
@@ -34,21 +36,30 @@ public class CLikeCommentParser extends AbstractCommentParser {
 
         for (int i = 0; i < contenuto.length(); i++) {
             boolean ultimoCarattere = i == contenuto.length() - 1;
-            char carattereAttuale = contenuto.charAt(i);
+            carattereAttuale = contenuto.charAt(i);
 
 
-            if (inStringa) {
+            if (inStringa || inStringQuote) {
+                if (inStringa) {
+                    if (carattereAttuale == '"' && (caratterePrecedente != '\\' || isCaratterePrecedenteEndOfEscape)) {
+                        inStringa = false;
+                    }
 
-                if ((carattereAttuale == '"' && caratterePrecedente != '\\') || (Character.toString(carattereAttuale).equals("'") && caratterePrecedente != '\\')) {
-                    inStringa = false;
+                    isCaratterePrecedenteEndOfEscape = caratterePrecedente == '\\';
                 }
 
+                if(inStringQuote && Character.toString(carattereAttuale).equals("'") && caratterePrecedente != '\\'){
+                    inStringQuote=false;
+                }
             } else if (contenutoRiga || contenutoMultiRiga) {
                 if (contenutoRiga && ((carattereAttuale == '\n' || ultimoCarattere) )) {
                     contenutoRiga = false;
 
                     // COMMENTO RIGA NORMALE
                     // non deve essere processato ulteriormente
+                    if(ultimoCarattere){
+                        commentoAttuale.append(carattereAttuale);
+                    }
                     commenti.add(new Comment(numeroRiga, colonnaCommento, numeroMultiRiga, commentoAttuale.toString()));
                     //numeroMultiRiga = 0;
 
@@ -102,14 +113,14 @@ public class CLikeCommentParser extends AbstractCommentParser {
                 contenutoRiga = true;
 
             } else if (carattereAttuale == '*' && caratterePrecedente == '/') {
-                if(numeroRiga==2742){
-                    System.out.println("a");
-                }
+
                 colonnaCommento = colonna;
 
                 contenutoMultiRiga = true;
-            } else if (carattereAttuale == '"' || Character.toString(carattereAttuale).equals("'")) {
+            } else if (carattereAttuale == '"' ) {
                 inStringa = true;
+            }else if ( Character.toString(carattereAttuale).equals("'")){
+                inStringQuote=true;
             }
 
             caratterePrecedente = carattereAttuale;
