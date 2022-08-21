@@ -32,8 +32,9 @@ public class CLikeCommentParser extends AbstractCommentParser {
         char caratterePrecedente = 0;
         var commenti = new ArrayList<Comment>();
         var rimuoviAsterischi = false;
-
-
+        var backslashes = 0;
+        char carattereAttuale = 0;
+        var isCaratterePrecedenteEndOfEscape = false;
         for (int i = 0; i < contenuto.length(); i++) {
             boolean ultimoCarattere = i == contenuto.length() - 1;
             carattereAttuale = contenuto.charAt(i);

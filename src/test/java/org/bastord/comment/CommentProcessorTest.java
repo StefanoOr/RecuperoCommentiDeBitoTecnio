@@ -5,6 +5,158 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.*;
 
 class CommentProcessorTest {
+
+    public static void main(String[] args) {
+
+        String stringa="\nuovo";
+        System.out.println(stringa);
+    }
+    @Test
+    void testLineWithEndingCommentAndNewLine() {
+        //GIVEN
+        String input = """
+                ciao // mondo
+                """;
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("mondo");
+    }
+
+    @Test
+    void testLineWithEndingStarComment() {
+        //GIVEN
+        String input = """
+                ciao /* mondo*/""";
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("mondo");
+    }
+
+    @Test
+    void testLineWithEndingComment() {
+        //GIVEN
+        String input = """
+                ciao // mondo""";
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("mondo");
+    }
+
+    @Test
+    void testCommentOnly() {
+        //GIVEN
+        String input = "// mondo";
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("mondo");
+    }
+
+    @Test
+    void testCommentAndSpaceOnly() {
+        //GIVEN
+        String input = "// mondo ";
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("mondo");
+    }
+
+    @Test
+    void testCommentAndLineOnly() {
+        //GIVEN
+        String input = "// mondo\n";
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("mondo");
+    }
+
+
+
+    @Test
+    void testStringWithDoubleQuote() {
+        //GIVEN
+        String input = """
+                var x = "string'//ciao" // mondo""";
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("mondo");
+    }
+
+    @Test
+    void testStringWithSingleQuote() {
+        //GIVEN
+        String input = """
+                var x = 'string"//ciao' // mondo""";
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("mondo");
+    }
+
+    @Test
+    void testStringWithDoubleBackSlash(){
+
+        String input = """
+                "\\"  "/* a" //ciao
+                
+                """;
+
+        //WHEN
+        Comments result = CommentProcessor.process(input, "js");
+
+        //THEN
+        assertThat(result.comments())
+                .singleElement()
+                .extracting(Comment::comment)
+                .isEqualTo("ciao");
+    }
+
     @Test
     void commentoRiga() {
         String javaComments = """
