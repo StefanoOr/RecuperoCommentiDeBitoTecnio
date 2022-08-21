@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="html ParserHtml">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="Update clike + test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exampleApprendimento/ParserHtml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/exampleApprendimento/ParserHtmlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/exampleApprendimento/ParserHtmlTest.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java" afterDir="false" />
@@ -35,27 +32,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/org/bastord/comment/commentParser/CLikeCommentParser.java">
-      <ranges>
-        <range start1="29" end1="29" start2="29" end2="31" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="32" end1="34" start2="34" end2="37" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
-        <range start1="36" end1="37" start2="39" end2="40" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="39" end1="43" start2="42" end2="49" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="45" end1="45" start2="51" end2="54" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="51" end1="51" start2="60" end2="63" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="104" end1="107" start2="116" end2="117" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="110" end1="111" start2="120" end2="121" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-        <range start1="112" end1="112" start2="122" end2="124" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java">
-      <ranges>
-        <range start1="7" end1="7" start2="7" end2="159" changelist="82f0932d-415e-4682-9b89-0799376ea041" />
-        <range start1="79" end1="79" start2="231" end2="237" changelist="613d3f92-7ae2-41d3-b55d-2d1dd269751d" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -76,14 +52,15 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/ste_1/IdeaProjects/RecoverCommenti/src/main/java/org/exampleApprendimento&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ste_1/IdeaProjects/RecoverCommenti&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ste_1/Desktop/thesis-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -103,7 +80,7 @@
       <recent name="org.bastord.comment" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Example">
+  <component name="RunManager" selected="Application.classificatore">
     <configuration name="CommentProcessorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessorTest" />
       <module name="RecoverCommenti" />
@@ -123,6 +100,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.bastord.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="classificatore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.classificatore.classificatore" />
+      <module name="RecoverCommenti" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.classificatore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,29 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentProcessorTest.testStringWithDoubleBackSlash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RecoverCommenti" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.bastord.comment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.bastord.comment" />
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.CommentProcessorTest" />
-      <option name="METHOD_NAME" value="testStringWithDoubleBackSlash" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.classificatore" />
         <item itemvalue="Application.Example" />
         <item itemvalue="Application.CommentProcessorTest" />
         <item itemvalue="JUnit.CommentProcessorTest.testLineWithEndingComment" />
         <item itemvalue="JUnit.CommentProcessorTest" />
-        <item itemvalue="JUnit.CommentProcessorTest.testStringWithDoubleBackSlash" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +200,13 @@
       <workItem from="1655059054117" duration="18376000" />
       <workItem from="1655133604339" duration="121000" />
       <workItem from="1655547764710" duration="14100000" />
-      <workItem from="1656009825060" duration="17104000" />
+      <workItem from="1656009825060" duration="23412000" />
+      <workItem from="1656405327886" duration="5955000" />
+      <workItem from="1657472403126" duration="1930000" />
+      <workItem from="1657540127714" duration="2243000" />
+      <workItem from="1657788132153" duration="4336000" />
+      <workItem from="1657975409429" duration="54000" />
+      <workItem from="1660319099432" duration="1409000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -445,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656010762587</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Update clike + test">
+      <created>1656180828961</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1656180828961</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +460,6 @@
     <MESSAGE value=" Update PythonCommentParser.java" />
     <MESSAGE value="HtmlCommentParser  impletementato Javascript per &lt;script&gt;" />
     <MESSAGE value="HtmlCommentParser" />
-    <MESSAGE value="test" />
     <MESSAGE value="Estrazione commenti nel tag script" />
     <MESSAGE value="init SolidityCommentParser" />
     <MESSAGE value="init RustCommentParser" />
@@ -484,7 +470,9 @@
     <MESSAGE value="CueCommentParser" />
     <MESSAGE value="CLikeCommentParser update gestione string" />
     <MESSAGE value="html ParserHtml" />
-    <option name="LAST_COMMIT_MESSAGE" value="html ParserHtml" />
+    <MESSAGE value="Update clike + test" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -513,6 +501,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java</url>
           <line>6</line>
           <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java</url>

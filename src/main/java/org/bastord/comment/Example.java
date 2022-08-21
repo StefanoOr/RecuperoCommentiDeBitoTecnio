@@ -47,12 +47,6 @@ public class Example {
 
     }else {
 
-
-
-
-
-
-
             // Leggi i commenti da un File
             File file = new File(fileName);
             Comments commenti = CommentProcessor.process(file);
@@ -78,8 +72,6 @@ public class Example {
 
 
 
-
-
         public void printFileNames (File[] a,int i, int lvl,File FdirectoryCsv,String directory) throws Exception {
             // caso base della ricorsione
             // i == a.length significa che la directory ha
@@ -93,16 +85,20 @@ public class Example {
 
             // schede per fornire il rientro
             // per i file della sottodirectory
-            for (int j = 0; j < lvl; j++) {
-                System.out.print("\t");
-            }
+          try {
+              for (int j = 0; j < lvl; j++) {
+                  System.out.print("\t");
+              }
+          }catch (Exception e ){
+              System.out.println("errore nel path " + a[i].getPath());
+          }
             // verifica se l'oggetto incontrato è un file o meno
             if (a[i].isFile() ) {
 
                 Comments commenti = CommentProcessor.process(file);
                 // Stampa i commenti (per debug)
                 if(commenti!=null) {
-                    System.out.println("\nLeggiamo di commenti di: " + commenti.filename() +" percorso : "+ a[i].getPath());
+                    System.out.println("\nLeggiamo di commenti di: " + commenti.filename());
                   //  commenti.print();
 
 
@@ -111,11 +107,10 @@ public class Example {
                     commenti.writeToCSV(new FileWriter(cvsTest, StandardCharsets.UTF_8));
 
                   var reader = new FileReader(cvsTest);
-                       if(a[i].getName().equals("feature_block.py")){
-                           System.out.println("test");
-                       }
+
                         commenti = new Comments(cvsTest.getName(), Comments.readFromCSV(reader));
                         commenti.print();
+                    System.out.println("\nLeggiamo di commenti di: " + commenti.filename());
 
                     }
 
@@ -138,11 +133,19 @@ public class Example {
                     System.out.println("Error !");
                 }
 
-                printFileNames(file.listFiles(), 0, lvl + 1,FdirectoryCsv,directory);
+                try{
+                    printFileNames(file.listFiles(), 0, lvl + 1,FdirectoryCsv,directory);
+                }catch (Exception e){
+                    System.out.println("errore nel path " + a[i].getPath());
+                }
             }
             // Stampa ricorsivamente i file dalla directory
             // i + 1 significa cercare il file successivo
-            printFileNames(a, i + 1, lvl,FdirectoryCsv,directory);
+          try{
+              printFileNames(a, i + 1, lvl,FdirectoryCsv,directory);
+           }catch (Exception e){
+        System.out.println("errore nel path " + a[i].getPath());
+    }
         }
 
 
