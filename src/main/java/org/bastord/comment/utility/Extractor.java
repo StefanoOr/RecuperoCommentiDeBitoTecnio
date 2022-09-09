@@ -11,8 +11,7 @@ import java.util.List;
 
 public class Extractor {
 
-    public static void main(String[] args) throws IOException {
-        var source = Paths.get("C:\\Users\\ste_1\\Desktop\\TirocinioCSV\\Terra");
+    public static void main(String[] args) throws IOException {        var source = Paths.get("C:\\Users\\ste_1\\Desktop\\TirocinioCSV\\Bitcoin");
         var target = Paths.get("C:\\Users\\ste_1\\Desktop\\Extractor\\");
         copyFilesTo(source, target);
     }

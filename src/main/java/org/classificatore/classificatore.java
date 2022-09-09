@@ -1,64 +1,68 @@
 package org.classificatore;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.ObjectOutputStream;
-import java.io.ObjectInputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.List;
 
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.classify.ColumnDataClassifier;
-import edu.stanford.nlp.classify.LinearClassifier;
 import edu.stanford.nlp.ling.Datum;
 import edu.stanford.nlp.objectbank.ObjectBank;
-import edu.stanford.nlp.util.ErasureUtils;
+import org.bastord.comment.utility.LetturaCsv;
 
 class classificatore {
+    //chiedere a maldonado il prop via email  fatto
+    //addestrare il classificatore e salvare il file (addestrare su tutto il dataset completo) fatto
+    //caricare  il file gz (classificatore adddestrato)  nel script java
+    //elimima i segni di punteggiatura per ogni commento tranne ? e !  fatto
+    //avviare la classificazione commento per commento fatto
+    //inserire il commento e la classificazione nel file csv merge || colonna A commento , B classificazione , C nome del file csv originale
 
     public static void main(String[] args) throws Exception {
-        ColumnDataClassifier cdc = new ColumnDataClassifier("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\20news1.prop");
+
+        String path = "C:\\Users\\ste_1\\Desktop\\Extractor"; //directory of all file csv project
+        File fObj = new File(path);
+
+
+        File a[] = fObj.listFiles();
+
+        ColumnDataClassifier cdc = new ColumnDataClassifier("C:\\Users\\ste_1\\Desktop\\prop1.prop");
         Classifier<String, String> cl = cdc
                 .makeClassifier(cdc.readTrainingExamples("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\td_trainset.csv"));
-        for (String line : ObjectBank.getLineIterator("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\td_testset.csv", "utf-8")) {
-            // instead of the method in the line below, if you have the individual elements
-            // already you can use cdc.makeDatumFromStrings(String[])
-            Datum<String, String> d = cdc.makeDatumFromLine(line);
-            System.out.println(line + "  ==>  " + cl.classOf(d));
-        }//   w   ww  .   d e   m  o   2  s  .  c  o m
 
-        //    demonstrateSerialization();
-    }
 
-    public static void demonstrateSerialization() throws IOException, ClassNotFoundException {
-        System.out.println("Demonstrating working with a serialized classifier");
-        ColumnDataClassifier cdc = new ColumnDataClassifier("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\cheese2007.prop");
-        Classifier<String, String> cl = cdc
-                .makeClassifier(cdc.readTrainingExamples("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\td_testset.csv"));
+        // inserisci qui il file gz  ColumnDataClassifier cdc = ColumnDataClassifier.getClassifier(/// inserisci qui gz)
 
-        // Exhibit serialization and deserialization working. Serialized to bytes in memory for simplicity
-        System.out.println();
-        System.out.println();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        ObjectOutputStream oos = new ObjectOutputStream(baos);
-        oos.writeObject(cl);
-        oos.close();
-        byte[] object = baos.toByteArray();
-        ByteArrayInputStream bais = new ByteArrayInputStream(object);
-        ObjectInputStream ois = new ObjectInputStream(bais);
-        LinearClassifier<String, String> lc = ErasureUtils.uncheckedCast(ois.readObject());
-        ois.close();
-        ColumnDataClassifier cdc2 = new ColumnDataClassifier("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\cheese2007.prop");
+        //ColumnDataClassifier cdc = ColumnDataClassifier.getClassifier("C:\\Users\\ste_1\\Desktop\\classificatore.ser");
 
-        // We compare the output of the deserialized classifier lc versus the original one cl
-        // For both we use a ColumnDataClassifier to convert text lines to examples
-        for (String line : ObjectBank.getLineIterator("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\td_testset.csv", "utf-8")) {
-            Datum<String, String> d = cdc.makeDatumFromLine(line);
-            Datum<String, String> d2 = cdc2.makeDatumFromLine(line);
-            System.out.println(line + "  =origi=>  " + cl.classOf(d));
-            System.out.println(line + "  =deser=>  " + lc.classOf(d2));
+        LetturaCsv csv = new LetturaCsv();
+        int nFile=0;
+        for (File file : a ) {
+            nFile++;
+
+            List<String> commenti =csv.lettura(file.getPath());
+            int riga =0;
+           for (String line : commenti) {
+               System.out.println(nFile+" "+ file.getName());
+                // instead of the method in the line below, if you have the individual elements
+                if ( !line.isEmpty()) {
+                    //line = removePunctuations(line);
+                    System.out.println(line);
+                    riga++;
+                    System.out.println(riga);
+                    //Datum<String, String> d = cdc.makeDatumFromLine(line);
+                    //System.out.println(line + "  ==>  " + cl.classOf(d));
+                }
+            }//   w   ww  .   d e   m  o   2  s  .  c  o m
+
+
         }
+
     }
 
+
+    public static String removePunctuations(String source) {
+        return source.replaceAll("[\"#$%&'()*+,-./:;<=>@\\[\\]^_`{|}~]", " ");
+    }
 
 
 }
