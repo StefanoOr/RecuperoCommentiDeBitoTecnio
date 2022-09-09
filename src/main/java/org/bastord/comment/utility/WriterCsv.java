@@ -12,10 +12,14 @@ public class WriterCsv {
 
     public void AppendToCsv(List<String> comments , String filePath) throws IOException {
 
+        String[] strings = comments.toArray(String[]::new);
+
+
+
         CSVWriter writer = new CSVWriter(new FileWriter(filePath, true));
 
 
-            writer.writeNext(comments);
+            writer.writeNext(strings);
 
             writer.close();
 

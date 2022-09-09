@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="utility Extractor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/ReaderCsv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" afterDir="false" />
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="CSV WIRTE READER">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/LetturaCsv.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
@@ -208,7 +205,7 @@
       <workItem from="1661933226424" duration="4720000" />
       <workItem from="1662536999763" duration="9250000" />
       <workItem from="1662714400011" duration="4596000" />
-      <workItem from="1662728823804" duration="2929000" />
+      <workItem from="1662728823804" duration="3048000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -462,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662714660643</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="CSV WIRTE READER">
+      <created>1662731794789</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1662731794789</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +508,8 @@
     <MESSAGE value="Update" />
     <MESSAGE value="test" />
     <MESSAGE value="utility Extractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="utility Extractor" />
+    <MESSAGE value="CSV WIRTE READER" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSV WIRTE READER" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -553,6 +558,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/ReaderCsv.java</url>
           <line>24</line>
           <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java</url>

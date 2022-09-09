@@ -21,7 +21,7 @@ class classificatore {
     public static void main(String[] args) throws Exception {
 
         String path = "C:\\Users\\ste_1\\Desktop\\Extractor"; //directory of all file csv project
-        String pathCsv="C:\\Users\\ste_1\\Desktop\\Bitcoin.csv"
+        String pathCsv="C:\\Users\\ste_1\\Desktop\\Bitcoin.csv";
         File fObj = new File(path);
         int numerOfFile=0;
 
