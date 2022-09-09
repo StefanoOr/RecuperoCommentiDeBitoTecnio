@@ -1,13 +1,14 @@
 package org.classificatore;
 
 import java.io.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.classify.ColumnDataClassifier;
-import edu.stanford.nlp.ling.Datum;
-import edu.stanford.nlp.objectbank.ObjectBank;
-import org.bastord.comment.utility.LetturaCsv;
+import org.bastord.comment.utility.ReaderCsv;
+import org.bastord.comment.utility.WriterCsv;
 
 class classificatore {
     //chiedere a maldonado il prop via email  fatto
@@ -20,10 +21,11 @@ class classificatore {
     public static void main(String[] args) throws Exception {
 
         String path = "C:\\Users\\ste_1\\Desktop\\Extractor"; //directory of all file csv project
+        String pathCsv="C:\\Users\\ste_1\\Desktop\\Bitcoin.csv"
         File fObj = new File(path);
+        int numerOfFile=0;
 
-
-        File a[] = fObj.listFiles();
+        File[] listOfFile = fObj.listFiles();
 
         ColumnDataClassifier cdc = new ColumnDataClassifier("C:\\Users\\ste_1\\Desktop\\prop1.prop");
         Classifier<String, String> cl = cdc
@@ -34,28 +36,38 @@ class classificatore {
 
         //ColumnDataClassifier cdc = ColumnDataClassifier.getClassifier("C:\\Users\\ste_1\\Desktop\\classificatore.ser");
 
-        LetturaCsv csv = new LetturaCsv();
-        int nFile=0;
-        for (File file : a ) {
-            nFile++;
+        ReaderCsv csv = new ReaderCsv();
 
-            List<String> commenti =csv.lettura(file.getPath());
-            int riga =0;
+        WriterCsv writerCsv = new WriterCsv();
+
+        writerCsv.createCsv(pathCsv);
+
+        for (File file : listOfFile ) {
+            numerOfFile++;
+            List<String> listaCommenti = new ArrayList<>();
+            List<String> commenti =csv.lettura(file);
+
+
            for (String line : commenti) {
-               System.out.println(nFile+" "+ file.getName());
+
                 // instead of the method in the line below, if you have the individual elements
                 if ( !line.isEmpty()) {
-                    //line = removePunctuations(line);
+                    line = removePunctuations(line);
                     System.out.println(line);
-                    riga++;
-                    System.out.println(riga);
+                    listaCommenti.add(line);
+
+
                     //Datum<String, String> d = cdc.makeDatumFromLine(line);
                     //System.out.println(line + "  ==>  " + cl.classOf(d));
                 }
-            }//   w   ww  .   d e   m  o   2  s  .  c  o m
+
+                writerCsv.AppendToCsv(listaCommenti,pathCsv);
+            }
+
 
 
         }
+        System.out.println("Number of file read : "+ numerOfFile);
 
     }
 
