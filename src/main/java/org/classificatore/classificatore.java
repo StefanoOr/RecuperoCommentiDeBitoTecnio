@@ -7,6 +7,7 @@ import java.util.List;
 
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.classify.ColumnDataClassifier;
+import edu.stanford.nlp.ling.Datum;
 import org.bastord.comment.utility.ReaderCsv;
 import org.bastord.comment.utility.WriterCsv;
 
@@ -44,25 +45,36 @@ class classificatore {
 
         for (File file : listOfFile ) {
             numerOfFile++;
-            List<String> listaCommenti = new ArrayList<>();
             List<String> commenti =csv.lettura(file);
 
-
+            int contattore =0;
            for (String line : commenti) {
 
+
+
                 // instead of the method in the line below, if you have the individual elements
+
                 if ( !line.isEmpty()) {
+                    CsvClassificazione recordCsv = new CsvClassificazione();
+
+                    recordCsv.setNomeFile(file.getName());
                     line = removePunctuations(line);
-                    System.out.println(line);
-                    listaCommenti.add(line);
+
+                    recordCsv.setCommento(line);
 
 
-                    //Datum<String, String> d = cdc.makeDatumFromLine(line);
-                    //System.out.println(line + "  ==>  " + cl.classOf(d));
+
+
+                    Datum<String, String> d = cdc.makeDatumFromLine(line);
+                    recordCsv.setClassificazione(cl.classOf(d));
+                    writerCsv.AppendToCsv(recordCsv,pathCsv);
+                    System.out.println(line + "  ==>  " + cl.classOf(d));
                 }
 
-                writerCsv.AppendToCsv(listaCommenti,pathCsv);
+
             }
+
+
 
 
 

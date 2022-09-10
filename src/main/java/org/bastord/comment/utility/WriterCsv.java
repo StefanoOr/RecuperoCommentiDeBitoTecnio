@@ -1,6 +1,7 @@
 package org.bastord.comment.utility;
 
 import com.opencsv.CSVWriter;
+import org.classificatore.CsvClassificazione;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -10,16 +11,14 @@ import java.util.List;
 public class WriterCsv {
 
 
-    public void AppendToCsv(List<String> comments , String filePath) throws IOException {
+    public void AppendToCsv(CsvClassificazione record , String filePath) throws IOException {
 
-        String[] strings = comments.toArray(String[]::new);
-
-
+        String[] test={record.getCommento(),record.getClassificazione(),record.getNomeFile()};
 
         CSVWriter writer = new CSVWriter(new FileWriter(filePath, true));
 
 
-            writer.writeNext(strings);
+            writer.writeNext(test);
 
             writer.close();
 

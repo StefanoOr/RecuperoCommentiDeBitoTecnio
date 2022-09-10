@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="CSV WIRTE READER">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/CsvClassificazione.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" afterDir="false" />
@@ -146,7 +147,6 @@
       <list>
         <item itemvalue="Application.classificatore" />
         <item itemvalue="Application.ReaderCsv" />
-        <item itemvalue="Application.org.bastord.comment.utility.MergeCsv" />
         <item itemvalue="Application.TestCsv" />
       </list>
     </recent_temporary>
@@ -205,7 +205,8 @@
       <workItem from="1661933226424" duration="4720000" />
       <workItem from="1662536999763" duration="9250000" />
       <workItem from="1662714400011" duration="4596000" />
-      <workItem from="1662728823804" duration="3048000" />
+      <workItem from="1662728823804" duration="3546000" />
+      <workItem from="1662829950488" duration="1722000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -466,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662731794789</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="CSV WIRTE READER">
+      <created>1662731911236</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1662731911236</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,19 +558,9 @@
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/ReaderCsv.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="165" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="166" />
+          <line>15</line>
+          <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java</url>
@@ -592,6 +590,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/RecoverCommenti$Example.ic" NAME="Example Coverage Results" MODIFIED="1651935702670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.bastord.comment.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/RecuperoCommentiDeBitoTecnio$classificatore.ic" NAME="classificatore Coverage Results" MODIFIED="1662831061561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.classificatore.*</FILTER>
     </SUITE>
   </component>
 </project>
