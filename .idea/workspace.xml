@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="CSV WIRTE READER">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/CsvClassificazione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/AdestramentoClassificatoreFinale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
@@ -77,13 +76,13 @@
       <recent name="org.bastord.comment" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.classificatore">
-    <configuration name="MergeCsv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.bastord.comment.utility.MergeCsv" />
+  <component name="RunManager" selected="Application.org.classificatore.classificatore">
+    <configuration name="AdestramentoClassificatoreFinale" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.classificatore.AdestramentoClassificatoreFinale" />
       <module name="RecoverCommenti" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.bastord.comment.utility.*" />
+          <option name="PATTERN" value="org.classificatore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="classificatore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="org.classificatore.classificatore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.classificatore.classificatore" />
       <module name="RecoverCommenti" />
       <extension name="coverage">
@@ -145,7 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.classificatore" />
+        <item itemvalue="Application.org.classificatore.classificatore" />
+        <item itemvalue="Application.AdestramentoClassificatoreFinale" />
         <item itemvalue="Application.ReaderCsv" />
         <item itemvalue="Application.TestCsv" />
       </list>
@@ -206,7 +206,8 @@
       <workItem from="1662536999763" duration="9250000" />
       <workItem from="1662714400011" duration="4596000" />
       <workItem from="1662728823804" duration="3546000" />
-      <workItem from="1662829950488" duration="1722000" />
+      <workItem from="1662829950488" duration="1967000" />
+      <workItem from="1662974447900" duration="5034000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -474,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662731911236</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="CSV WIRTE READER">
+      <created>1662831836790</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1662831836790</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

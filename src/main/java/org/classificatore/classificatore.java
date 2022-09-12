@@ -28,14 +28,16 @@ class classificatore {
 
         File[] listOfFile = fObj.listFiles();
 
-        ColumnDataClassifier cdc = new ColumnDataClassifier("C:\\Users\\ste_1\\Desktop\\prop1.prop");
-        Classifier<String, String> cl = cdc
-                .makeClassifier(cdc.readTrainingExamples("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\td_trainset.csv"));
+        //ColumnDataClassifier cdc = new ColumnDataClassifier("C:\\Users\\ste_1\\Desktop\\prop1.prop");
+        //Classifier<String, String> cl = cdc
+              //  .makeClassifier(cdc.readTrainingExamples("C:\\Users\\ste_1\\Desktop\\Tirocinio\\Classificatore\\td_trainset.csv"));
 
 
         // inserisci qui il file gz  ColumnDataClassifier cdc = ColumnDataClassifier.getClassifier(/// inserisci qui gz)
 
-        //ColumnDataClassifier cdc = ColumnDataClassifier.getClassifier("C:\\Users\\ste_1\\Desktop\\classificatore.ser");
+        //ColumnDataClassifier cdc =  ColumnDataClassifier.getClassifier("C:\\Users\\ste_1\\Desktop\\classificatore2.ser");
+        ColumnDataClassifier classifier = new ColumnDataClassifier("C:\\Users\\ste_1\\Desktop\\prop1.prop");
+        Classifier<String,String> cdc = classifier.makeClassifier(classifier.readTrainingExamples("C:\\Users\\ste_1\\Desktop\\td_dataset.csv"));
 
         ReaderCsv csv = new ReaderCsv();
 
@@ -47,10 +49,7 @@ class classificatore {
             numerOfFile++;
             List<String> commenti =csv.lettura(file);
 
-            int contattore =0;
            for (String line : commenti) {
-
-
 
                 // instead of the method in the line below, if you have the individual elements
 
@@ -65,10 +64,13 @@ class classificatore {
 
 
 
-                    Datum<String, String> d = cdc.makeDatumFromLine(line);
-                    recordCsv.setClassificazione(cl.classOf(d));
+                    Datum<String, String> d = classifier.makeDatumFromLine(line);
+
+                    //inserisce nella colonna del file csv la classificazione
+                    recordCsv.setClassificazione(cdc.classOf(d));
+
                     writerCsv.AppendToCsv(recordCsv,pathCsv);
-                    System.out.println(line + "  ==>  " + cl.classOf(d));
+                    System.out.println(line + "  ==>  " + cdc.classOf(d));
                 }
 
 
@@ -85,7 +87,7 @@ class classificatore {
 
 
     public static String removePunctuations(String source) {
-        return source.replaceAll("[\"#$%&'()*+,-./:;<=>@\\[\\]^_`{|}~]", " ");
+        return source.replaceAll("[\"#$%&'()*+,-./:;<=>@\\[\\]^_`{|}~\n]", " ");
     }
 
 
