@@ -40,6 +40,7 @@ public class CsvClassificazione {
     }
 
     public void setNomeFile(String nomeFile) {
-        this.nomeFile = nomeFile;
+        this.nomeFile =nomeFile.replace("-","\\");
+
     }
 }

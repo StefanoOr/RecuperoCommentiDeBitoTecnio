@@ -28,7 +28,7 @@ public class Example {
         int userName = input.nextInt();
 
 
-  /* if(userName==1) {
+   if(userName==1) {
 
 
         File directoryPath = new File(directory);
@@ -71,7 +71,7 @@ public class Example {
                 commenti.print();
 
 
-            }*/
+            }
 
         File directoryPath = new File(directory);
 
@@ -119,7 +119,7 @@ public class Example {
                   //  commenti.print();
 
 
-                    // Scrivi i commento su un file CSV
+                    // Scrivi i commenti su un file CSV
                     File cvsTest = cambiaPercorsoFile(a[i],FdirectoryCsv.getName(),new File(directory),".csv");
                     commenti.writeToCSV(new FileWriter(cvsTest, StandardCharsets.UTF_8));
 
@@ -141,7 +141,7 @@ public class Example {
                 System.out.println("[" + a[i].getName() + "]");
                 // ricorsione per le sottodirectory
 
-               File directoryNew= cambiaPercorsoFile(a[i],FdirectoryCsv.getName(),new File(directory),"");
+               File directoryNew= cambiaPercorsoFileDirectory(a[i],FdirectoryCsv.getName(),new File(directory),"");
 
                 boolean D1 = directoryNew.mkdir();
                 if(D1){
@@ -179,12 +179,27 @@ public class Example {
         String primaParte = cartella.getParent()+ File.separator;
 
         int i = cartella.getPath().length();
-        String  secondaParte=file.getPath().substring(i);
+        Path  secondaParte= Path.of(file.getPath().substring(i));
+
+
+
+        String nome = secondaParte.getFileName().toString();
+
+        int j = nome.length();
+        String aggiunta  = secondaParte.toString().substring(0,secondaParte.toString().length()-j)+ secondaParte.toString().replace("\\","-").substring(1,secondaParte.toString().length()-j)+nome;
+
+        return new File(primaParte + cartellaDiUscita + aggiunta+csv);
+    }
+
+
+    public static File cambiaPercorsoFileDirectory(File file, String cartellaDiUscita, File cartella,String csv) {
+        String primaParte = cartella.getParent()+ File.separator;
+
+        int i = cartella.getPath().length();
+        Path  secondaParte= Path.of(file.getPath().substring(i));
 
         return new File(primaParte + cartellaDiUscita + secondaParte+csv);
 
     }
-
-
 
 }

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="classificatore">
+    <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="unione del progetto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/Extractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/Extractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/classificatore/CsvClassificazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/CsvClassificazione.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
@@ -79,7 +80,7 @@
       <recent name="org.bastord.comment" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Example">
+  <component name="RunManager" selected="Application.org.classificatore.classificatore">
     <configuration name="AdestramentoClassificatoreFinale" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.classificatore.AdestramentoClassificatoreFinale" />
       <module name="RecoverCommenti" />
@@ -147,9 +148,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.org.classificatore.classificatore" />
         <item itemvalue="Application.Example" />
         <item itemvalue="Application.Extractor" />
-        <item itemvalue="Application.org.classificatore.classificatore" />
         <item itemvalue="Application.AdestramentoClassificatoreFinale" />
         <item itemvalue="Application.ReaderCsv" />
       </list>
@@ -214,7 +215,8 @@
       <workItem from="1662974447900" duration="6029000" />
       <workItem from="1663146721814" duration="626000" />
       <workItem from="1665084642925" duration="1478000" />
-      <workItem from="1665619838021" duration="4792000" />
+      <workItem from="1665619838021" duration="5019000" />
+      <workItem from="1665662536928" duration="11395000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -503,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665084660919</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="unione del progetto">
+      <created>1665624847846</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1665624847846</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="secondo commit" />
     <MESSAGE value="Changes" />
     <MESSAGE value="terzo commit" />
     <MESSAGE value="AGGIUNTO LETTURA SOTTO DIRECTORY" />
@@ -546,7 +554,8 @@
     <MESSAGE value="utility Extractor" />
     <MESSAGE value="CSV WIRTE READER" />
     <MESSAGE value="classificatore" />
-    <option name="LAST_COMMIT_MESSAGE" value="classificatore" />
+    <MESSAGE value="unione del progetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="unione del progetto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -577,19 +586,29 @@
           <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/Extractor.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="174" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/Extractor.java</url>
           <line>29</line>
           <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="186" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java</url>
@@ -622,6 +641,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/RecuperoCommentiDeBitoTecnio$classificatore.ic" NAME="classificatore Coverage Results" MODIFIED="1662831061561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.classificatore.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/RecuperoCommentiDeBitoTecnio$Example.ic" NAME="Example Coverage Results" MODIFIED="1665662966384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.bastord.comment.*</FILTER>
     </SUITE>
   </component>
 </project>

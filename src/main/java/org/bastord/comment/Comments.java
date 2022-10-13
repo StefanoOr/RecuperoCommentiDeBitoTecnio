@@ -17,7 +17,8 @@ public record Comments(String filename, List<Comment> comments) {
         }
     }
 
-    private static final String[] CSV_HEADER = {"Riga", "Colonna", "NumeroDiRighe", "Commento"};
+    private static final String[] CSV_HEADER = {"Riga", "Colonna", "NumeroDiRighe", "Commento","NomeFile" +
+            ""};
 
     public void writeToCSV(Writer writer) throws IOException {
         try (var csv = new CSVWriter(writer)) {
