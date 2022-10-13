@@ -10,10 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Extractor {
+//estrae tutti i file  da una  directory e sotto directory
+    public  void estrazioneFile(Path source ,Path target) throws IOException {
 
-    public static void main(String[] args) throws IOException {        var source = Paths.get("C:\\Users\\ste_1\\Desktop\\TirocinioCSV\\Bitcoin");
-        var target = Paths.get("C:\\Users\\ste_1\\Desktop\\Extractor\\");
-        copyFilesTo(source, target);
+        File createDirectory = new File(target.toUri());
+        if(createDirectory.mkdir()){
+            System.out.println("cartella creata con successo");
+        }
+        copyFilesTo(source, createDirectory.toPath());
     }
 
     private static void copyFilesTo(Path source, Path target) throws IOException {
@@ -23,8 +27,10 @@ public class Extractor {
             }
             else {
 
-                    System.out.printf("Copia da <%s> a <%s>%n", path, target.resolve(path.getFileName()));
+                    System.out.printf("Copia da <%s> a <%s>%n", path, target.resolve(path.toString()));
                     Files.copy(path, target.resolve(path.getFileName()), StandardCopyOption.REPLACE_EXISTING);
+
+
 
             }
         }

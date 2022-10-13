@@ -1,8 +1,12 @@
 package org.bastord.comment;
+import org.bastord.comment.utility.Extractor;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Example {
@@ -15,6 +19,7 @@ public class Example {
         fileName = "C:\\Users\\ste_1\\Desktop\\Tirocinio\\nuovo 1.js";
 
         //path della cartella
+      //  File directory = new File("C:\\Users\\ste_1\\Desktop\\Tirocinio")
         String directory = "C:\\Users\\ste_1\\Desktop\\Tirocinio";
 
         Scanner input = new Scanner(System.in);
@@ -23,7 +28,7 @@ public class Example {
         int userName = input.nextInt();
 
 
-    if(userName==1) {
+  /* if(userName==1) {
 
 
         File directoryPath = new File(directory);
@@ -66,7 +71,19 @@ public class Example {
                 commenti.print();
 
 
-            }
+            }*/
+
+        File directoryPath = new File(directory);
+
+        Extractor estrattore = new Extractor();
+        for (File file : directoryPath.listFiles()){
+
+
+            var source = Paths.get("C:\\Users\\ste_1\\Desktop\\TirocinioCSV\\"+file.getName());
+            var target = Paths.get("C:\\Users\\ste_1\\Desktop\\Extractor\\"+file.getName());
+            estrattore.estrazioneFile(source,target);
+        }
+
         }
 
 

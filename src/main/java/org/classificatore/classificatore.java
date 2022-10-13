@@ -62,8 +62,6 @@ class classificatore {
                     recordCsv.setCommento(line);
 
 
-
-
                     Datum<String, String> d = classifier.makeDatumFromLine(line);
 
                     //inserisce nella colonna del file csv la classificazione
