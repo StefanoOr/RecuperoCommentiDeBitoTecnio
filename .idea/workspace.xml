@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="613d3f92-7ae2-41d3-b55d-2d1dd269751d" name="Changes" comment="unione del progetto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/classificatore/CsvClassificazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/CsvClassificazione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/Extractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/Extractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/ReaderCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/ReaderCsv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/classificatore/classificatore.java" afterDir="false" />
     </list>
     <list id="82f0932d-415e-4682-9b89-0799376ea041" name="Changes by Rasael" comment="test" />
@@ -57,6 +56,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -149,8 +149,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.org.classificatore.classificatore" />
-        <item itemvalue="Application.Example" />
         <item itemvalue="Application.Extractor" />
+        <item itemvalue="Application.Example" />
         <item itemvalue="Application.AdestramentoClassificatoreFinale" />
         <item itemvalue="Application.ReaderCsv" />
       </list>
@@ -216,7 +216,19 @@
       <workItem from="1663146721814" duration="626000" />
       <workItem from="1665084642925" duration="1478000" />
       <workItem from="1665619838021" duration="5019000" />
-      <workItem from="1665662536928" duration="11395000" />
+      <workItem from="1665662536928" duration="15545000" />
+      <workItem from="1666088248459" duration="9526000" />
+      <workItem from="1667396385843" duration="659000" />
+      <workItem from="1668422026154" duration="2962000" />
+      <workItem from="1668507501696" duration="917000" />
+      <workItem from="1671654161760" duration="3000" />
+      <workItem from="1672833700799" duration="2218000" />
+      <workItem from="1674058042757" duration="13261000" />
+      <workItem from="1674232774348" duration="2177000" />
+      <workItem from="1674816626714" duration="980000" />
+      <workItem from="1675364391951" duration="1218000" />
+      <workItem from="1675691512965" duration="8140000" />
+      <workItem from="1675780587961" duration="12233000" />
     </task>
     <task id="LOCAL-00001" summary="primo commit">
       <created>1651244054552</created>
@@ -512,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665624847846</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="unione del progetto">
+      <created>1665678872507</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1665678872507</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,16 +600,6 @@
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/WriterCsv.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="167" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/Extractor.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
           <line>122</line>
           <option name="timeStamp" value="176" />
@@ -609,6 +618,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/Example.java</url>
           <line>195</line>
           <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bastord/comment/utility/Extractor.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/bastord/comment/CommentProcessorTest.java</url>
@@ -629,6 +643,7 @@
     <watches-manager>
       <configuration name="Application">
         <watch expression="contenutoMultiRiga" />
+        <watch expression="csvReader" />
       </configuration>
     </watches-manager>
   </component>

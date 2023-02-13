@@ -13,6 +13,14 @@ public class ReaderCsv {
 
     public List<String> lettura(File file) throws FileNotFoundException {
         List<String> comment = new ArrayList<>();
+        String a = file.getName();
+
+        System.out.println("\n"+ a);
+        if(file.getName() == "Avalanche-avalanche-smart-contract-quickstart-main-contracts-MockContract.sol.csv"){
+
+
+            System.out.println("debug");
+        }
 
         Reader reader = new FileReader(file);
         try {

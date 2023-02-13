@@ -36,6 +36,20 @@ public class Extractor {
         }
     }
 
+    public static void main(String[] args) throws Exception {
+        String directory = "C:\\Users\\ste_1\\Desktop\\TirocinioCSV";
+        File directoryPath = new File(directory);
+
+        Extractor estrattore = new Extractor();
+        for (File file : directoryPath.listFiles()) {
+
+
+            var source = Paths.get("C:\\Users\\ste_1\\Desktop\\TirocinioCSV\\" + file.getName());
+            var target = Paths.get("C:\\Users\\ste_1\\Desktop\\Extractor\\" + file.getName());
+            estrattore.estrazioneFile(source, target);
+
+        }
+    }
 }
 
 

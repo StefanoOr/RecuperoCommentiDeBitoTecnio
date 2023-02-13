@@ -1,0 +1,41 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ê“Ï¥
+_
+java:S2095"HUse try-with-resources or close this "FileReader" in a "finally" clause.(î¤äø
+T
+java:S2589Â"8Remove this expression which always evaluates to "false"(»ôªûÿÿÿÿ
+O
+java:S2589Á"8Remove this expression which always evaluates to "false"(¶¯û¤
+S
+java:S2589Â"7Remove this expression which always evaluates to "true"(»ôªûÿÿÿÿ
+`
+java:S2583"DChange this condition so that it does not always evaluate to "false"(¤­©òşÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(ğ–çÎıÿÿÿÿ
+g
+java:S3457."Q%n should be used in place of \n to produce the platform-specific line separator.(ˆš´ó
+N	java:S106."9Replace this use of System.out or System.err by a logger.(ˆš´ó
+;
+java:S6326."%Replace spaces with quantifier `{2}`.(ˆš´ó
+^
+java:S5361."HReplace this call to "replaceAll()" by a call to the "replace()" method.(ˆš´ó
+h
+java:S37763"RRefactor this method to reduce its Cognitive Complexity from 47 to the 15 allowed.(ìÿª¡
+Q	java:S1254"<This block of commented-out lines of code should be removed.(ãµ°º
+<
+java:S1110V"!Remove these useless parentheses.(®§Á×ûÿÿÿÿ
+n
+java:S3776¨"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(³®êÊÿÿÿÿÿ
+˜
+java:S1130¨"|Remove the declaration of thrown exception 'com.opencsv.exceptions.CsvException', as it cannot be thrown from method's body.(³®êÊÿÿÿÿÿ
+W	java:S125Ó"<This block of commented-out lines of code should be removed.(•“‰Šùÿÿÿÿ
+R	java:S125Ü"<This block of commented-out lines of code should be removed.(Å„úó
+]
+java:S1075ë"ARefactor your code to get this URI from a customizable parameter.(ı‚ÊŞøÿÿÿÿ
+A
+java:S6326÷"%Replace spaces with quantifier `{2}`.(‡ Íéûÿÿÿÿ
+d
+java:S5361÷"HReplace this call to "replaceAll()" by a call to the "replace()" method.(‡ Íéûÿÿÿÿ
+N	java:S106ÿ"9Replace this use of System.out or System.err by a logger.(óŠŞD
+X
+java:S1075ˆ"ARefactor your code to get this URI from a customizable parameter.(÷¸×†
+T	java:S106‰"9Replace this use of System.out or System.err by a logger.(û­×–øÿÿÿÿ

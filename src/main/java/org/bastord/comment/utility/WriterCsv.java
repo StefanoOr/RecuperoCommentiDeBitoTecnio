@@ -11,16 +11,22 @@ import java.util.List;
 public class WriterCsv {
 
 
-    public void AppendToCsv(CsvClassificazione record , String filePath) throws IOException {
+      public void AppendToCsv(CsvClassificazione record , String filePath) throws IOException, InterruptedException {
 
         String[] test={record.getCommento(),record.getClassificazione(),record.getNomeFile()};
 
-        CSVWriter writer = new CSVWriter(new FileWriter(filePath, true));
+        try {
+            CSVWriter writer = new CSVWriter(new FileWriter(filePath, true));
 
 
             writer.writeNext(test);
-
+           // Thread.sleep(100);
             writer.close();
+        }catch (Exception e){
+
+
+
+        }
 
     }
 

@@ -1,0 +1,16 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(™‹Ûûúÿÿÿÿ
+R
+java:S2589."7Remove this expression which always evaluates to "true"(®§Á×ûÿÿÿÿ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¡‰€Íüÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ãµ°º
+M
+java:S1481"7Remove this unused "contenutoMultiRiga" local variable.(Æ‡ÿ›
+Q
+java:S1481!"6Remove this unused "rimuoviAsterischi" local variable.(ýä›Õùÿÿÿÿ
+<
+java:S1110."!Remove these useless parentheses.(®§Á×ûÿÿÿÿ
+Q	java:S1254"<This block of commented-out lines of code should be removed.(Ö•Ê•
+S
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ
