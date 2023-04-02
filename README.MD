@@ -13,38 +13,32 @@ c++, python,go, c, javascript, solidity,typescript,java,rust,cue,css,haskell, ma
 
 In questa repositori è compreso un altro progetto per la classificazione del testo attraverso lo stanford classifier .
 Il prop da me utilizzato è il seguente:
-#
- Features
-#
-#useClassFeature=true
+
+
+
+useClassFeature=true
 1.useNGrams=false
 1.useLowercaseSplitWords=true
 1.splitWordsRegexp=\\s+
-#useBinary=true
-#1.binnedLengths=10,20,30
-#
- Printing
-#
+useBinary=true
+1.binnedLengths=10,20,30
+
+
+
 printClassifier=HighWeight
 printClassifierParam=60000
 displayAllAnswers=true
 printTo=top_features.txt
-#
-# Mapping
-#
+
 goldAnswerColumn=0
 displayedColumn=1
-#
- Optimization
-#
+
 intern=true
 sigma=3
 useQN=true
 QNsize=15
 tolerance=1e-4
-#
-Training input
-#
+
 trainFile=td_trainset.csv
 testFile= td_testset.csv
 
