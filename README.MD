@@ -16,31 +16,7 @@ Il prop da me utilizzato è il seguente:
 
 
 
-useClassFeature=true
-1.useNGrams=false
-1.useLowercaseSplitWords=true
-1.splitWordsRegexp=\\s+
-useBinary=true
-1.binnedLengths=10,20,30
 
-
-
-printClassifier=HighWeight
-printClassifierParam=60000
-displayAllAnswers=true
-printTo=top_features.txt
-
-goldAnswerColumn=0
-displayedColumn=1
-
-intern=true
-sigma=3
-useQN=true
-QNsize=15
-tolerance=1e-4
-
-trainFile=td_trainset.csv
-testFile= td_testset.csv
 
 
 https://docs.google.com/document/d/1EXGS0nGLS3JGIIsR-EF9bfKrk5-IEBxzkOjpGPYyI34/edit?usp=sharing
