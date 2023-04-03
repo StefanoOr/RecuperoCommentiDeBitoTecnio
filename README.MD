@@ -12,11 +12,11 @@ Linguaggi supportati per l'estrazione:
 c++, python,go, c, javascript, solidity,typescript,java,rust,cue,css,haskell, markdown, ruby,
 
 In questa repositori è compreso un altro progetto per la classificazione del testo attraverso lo stanford classifier .
-Il prop da me utilizzato è il seguente:
+per il prop e dataset contaattatemi.
 
 
 
-
+tesi sul progetto:
 
 
 https://docs.google.com/document/d/1EXGS0nGLS3JGIIsR-EF9bfKrk5-IEBxzkOjpGPYyI34/edit?usp=sharing
